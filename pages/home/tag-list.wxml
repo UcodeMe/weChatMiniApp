@@ -1,0 +1,16 @@
+<view class='tagNames'>
+  <view class='tagTitle'>推荐理由：</view>
+  <view class='tagView'>
+    <block wx:if="{{item.companyInfo.tagNames}}">
+      <view class='tags' wx:for="{{item.companyInfo.tagNames}}" wx:key="item">
+        <view>{{item}}</view>
+      </view>
+    </block>
+
+    <block wx:else>
+      <view class='tags'>
+        <view>福利好</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<block wx:if="nodeNames.length > 0">
+  <view class="interview-process">
+    <view class='node' wx:for="{{nodeNames}}" wx:for-item="item" wx:key="key" wx:index="index">
+      <view class='top'>
+        <view class="{{index==0?'hide':'left'}}"></view>
+        <view class='circle'></view>
+        <view class="{{index == nodeNames.length - 1?'hide':'right'}}"></view>
+      </view>
+      <view class='text'>{{item}}</view>
+    </view>
+  </view>
+</block>

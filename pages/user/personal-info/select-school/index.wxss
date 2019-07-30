@@ -1,0 +1,25 @@
+@import "/assets/wxss/common.wxss";
+
+page {
+  padding-top: 30rpx;
+}
+
+.top-search {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 999;
+  width: 95%;
+  margin-left: 22rpx;
+  margin-right: 22rpx;
+}
+
+.list-content {
+  margin: 18rpx 18rpx 0rpx 18rpx;
+}
+
+.no-search-data {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+}

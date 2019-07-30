@@ -1,0 +1,7 @@
+<view class="cell-item {{noBorder?'':'split-line'}} {{noBorder && bottomBorder?'bottom-split-line':''}}">
+  <text>{{cellName}}</text>
+  <view>
+    <text>{{cellValue}}</text>
+    <text class='iconfont icon-arrowright'></text>
+  </view>
+</view>

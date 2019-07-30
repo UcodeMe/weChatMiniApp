@@ -1,0 +1,24 @@
+@import "/assets/wxss/iconfont.wxss";
+
+.search-block {
+  width: calc(100% - 142rpx);
+}
+
+.location-search {
+  width: inherit;
+  padding: 0 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.region {
+  color: #333;
+  font-size: 32rpx;
+  margin-right: 12rpx;
+}
+
+.icon-coordinates1 {
+  font-size: 32rpx;
+  margin-right: 35rpx;
+}

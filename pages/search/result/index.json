@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "complex-filter": "/components/complex-filter/index",
+    "search-bar": "/components/search-bar/index",
+    "tab-bar": "/components/tab-bar/index",
+    "no-search-data": "/components/no-search-data/index"
+  }
+}

@@ -1,0 +1,17 @@
+<view class='fixed-top'>
+  <view class='search-bar'>
+    <!-- <view class='position' bindtap='_position'>
+      <text>南京</text>
+      <view class='icon'></view>
+    </view> -->
+    <navigator url='/pages/search/index'>
+      <search-bar noButton/>
+    </navigator>
+  </view>
+</view>
+
+
+
+<view class="image-banner">
+  <swiper-banner image-list="{{swiperBannerImages}}" />
+</view>

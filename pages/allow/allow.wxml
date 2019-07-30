@@ -1,0 +1,9 @@
+<view class='operation-block' wx:if='{{isLogin}}'>
+  <image style='height:{{windowHeight}}px' mode='scaleToFill' src='http://qiniu.meefine.com/re-bg.jpg' />
+  <view class='operation'>
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="_bindGetUserInfo">
+      <text class='iconfont icon-weixin' /> 微信授权登录
+    </button>
+    <view class='need-update' wx:else>请升级微信版本</view>
+  </view>
+</view>

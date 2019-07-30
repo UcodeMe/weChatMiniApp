@@ -1,0 +1,19 @@
+.tab-bar {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40rpx;
+}
+
+.tab-bar>view {
+  padding: 0 20rpx 10rpx 20rpx;
+  white-space: nowrap;
+}
+
+.tab-bar .active {
+  color: #47BCB8;
+  border-bottom: 6rpx solid #47BCB8;
+}

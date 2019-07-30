@@ -1,0 +1,23 @@
+<view class='session-list clearfix'>
+  <navigator url='/pages/company/index?companyId={{item.companyInfo.id}}'>
+
+    <include src="publicize-company.wxml" />
+
+    <include src="tag-list.wxml" />
+
+    <view class='recent clearfix' wx:if="{{item.publicizeInfo.holdDate}}">
+      <view class='recent-title'>近期宣讲会</view>
+      <!-- <block wx:for="{{item.publicizeInfo}}" wx:key="item"> -->
+      <view class='recent-item'>时间：{{item.publicizeInfo.holdDate}} {{item.publicizeInfo.startTime}}-{{item.publicizeInfo.endTime}}({{item.publicizeInfo.weekDay}})</view>
+      <view class=' recent-item'>地点：{{item.publicizeInfo.place}}</view>
+      <!-- </block> -->
+    </view>
+      <interview-process node-names="{{item.companyInfo.recruitmentProcess}}" />
+
+    <view class='more-job' style='background: url("http://qiniu.meefine.com/more_job_ba.png") no-repeat'>
+      <view class='more-line'></view>
+      <view class='job-num'>共有{{item.companyInfo.jobCount}}个岗位等你来申请</view>
+      <view class='more-line'></view>
+    </view>
+  </navigator>
+</view>

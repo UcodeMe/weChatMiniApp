@@ -1,0 +1,51 @@
+.interview-process {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+
+.interview-process .node {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interview-process .top {
+  display: flex;
+  align-items: center;
+}
+
+.interview-process .left {
+  width: 40rpx;
+  height: 3rpx;
+  background: rgba(71, 188, 184, 1);
+}
+
+.interview-process .hide {
+  width: 40rpx;
+  height: 3rpx;
+  background: #fff;
+}
+
+.interview-process .right {
+  width: 40rpx;
+  height: 3rpx;
+  background: rgba(71, 188, 184, 1);
+}
+
+.interview-process  .circle {
+  width: 32rpx;
+  height: 32rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 3rpx solid rgba(71, 188, 184, 1);
+  border-radius: 50%;
+}
+
+.interview-process .text {
+  font-size: 22rpx;
+  color: rgba(153, 153, 153, 1);
+  margin-top: 15rpx;
+  width: 92rpx;
+}

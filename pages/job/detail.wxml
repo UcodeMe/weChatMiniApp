@@ -1,0 +1,99 @@
+<!--pages/job/detail.wxml-->
+<import src="../../assets/wxParse/wxParse.wxml" />
+
+<view class='job-top clearfix'>
+  <view class='job-detail clearfix'>
+    <view class='jab-name'>{{jobInfo.jobName}}</view>
+    <view class='job-wages' wx:if='{{jobInfo.minSalary}}'>{{jobInfo.minSalary}}k-{{jobInfo.maxSalary}}k</view>
+    <view class='job-wages' wx:else>面议</view>
+  </view>
+  <view class='job-request clearfix'>
+    <view>招{{jobInfo.quantity}}人</view>
+    <!-- <view>{{jobInfo.intentEducationLevel}}</view> -->
+    <view wx:if="{{jobInfo.intentEducationLevel == 'DOCTOR'}}">博士</view>
+    <view wx:if="{{jobInfo.intentEducationLevel == 'POSTGRADUATE'}}">研究生</view>
+    <view wx:if="{{jobInfo.intentEducationLevel == 'UNDERGRADUATE'}}">本科</view>
+    <view wx:if="{{jobInfo.intentEducationLevel == 'JUNIOR'}}">大专</view>
+    <view wx:if="{{jobInfo.intentEducationLevel == 'NOlIMIT'}}">不限</view>
+    <view wx:if='{{jobInfo.specialtyNames}}'>{{jobInfo.specialtyNames}}</view>
+    <view wx:else>不限</view>
+  </view>
+  <view class='job-place'>工作地点：{{jobInfo.regionNames}}</view>
+  <view class='job-save'>
+    <text>{{jobInfo.publishTime}}</text>
+    <text wx:if='{{jobInfo.publishTime}}'>发布</text>
+    <text wx:else>近期发布</text>
+    <view class='job-collection' bindtap='_saveJob'>
+      <view class='iconfont {{saveIcon == true ? "icon-like_fill":"icon-like"}} '></view>
+      <view>收藏</view>
+    </view>
+  </view>
+</view>
+<view class='job-middle'>
+  <view class='company clearfix'>
+    <image class='companyLogo' src='{{jobInfo.companyInfo.companyLogo}}' mode='scaleToFill'></image>
+    <view class='middle'>
+      <view class='companyName'>{{jobInfo.companyInfo.companyName}}</view>
+      <!-- <view class='type'>{{companyInfo.industryPositionName}}</view> -->
+    </view>
+    <view class='bottom'>
+      <view class='natureName' wx:if='{{jobInfo.companyInfo.natureName}}'>企业性质：{{jobInfo.companyInfo.natureName}}</view>
+      <view class='natureName' wx:else>企业性质：未知</view>
+      <view class='natureName-line'></view>
+      <view class='industryNames' wx:if='{{jobInfo.companyInfo.industryNames}}'>所属行业：{{jobInfo.companyInfo.industryNames}}</view>
+      <view class='industryNames' wx:else>所属行业：未知</view>
+    </view>
+  </view>
+</view>
+
+<view class='page-line'></view>
+
+<view class='job-bottom'>
+  <view class='job-describe'>职位描述</view>
+  <view class='tags'>
+    <block wx:for='{{jobInfo.tagNames}}' wx:key="item">
+      <view>{{item}}</view>
+    </block>
+  </view>
+
+  <block wx:if="{{jobInfo.jobDesc}}">
+    <view class='job-introduced'>工作内容</view>
+    <view class='job-text'>
+      <template is="wxParse" data="{{wxParseData:jobDesc.nodes}}" />
+    </view>
+  </block>
+
+  <block wx:if="{{jobInfo.jobRequirement}}">
+    <view class='job-introduced'>工作要求</view>
+    <view class='job-text'>
+      <template is="wxParse" data="{{wxParseData:jobRequirement.nodes}}" />
+    </view>
+  </block>
+
+</view>
+
+<view class='job-get'>
+  <button open-type='share' class='btn-share'>
+    <text class='iconfont icon-share'></text>
+  </button>
+  <block wx:if="{{jobInfo.jobCategory =='SELECTION' }}">
+    <block wx:if="{{jobInfo.directRecommend}}">
+      <view class='job-register'>已报名</view>
+    </block>
+    <block wx:else>
+      <navigator url='/pages/application/index/index?jobId={{jobInfo.id}}'>
+        <view class='job-register'>报名</view>
+      </navigator>
+    </block>
+  </block>
+  <block wx:if="{{jobInfo.jobCategory =='COMMON' || jobInfo.jobCategory =='OPTIMIZATION'}}">
+    <view class='job-register' bindtap='_jobRegister'>网申报名</view>
+  </block>
+</view>
+
+<view class='showDownload' hidden="{{showDownload}}">
+  <view class='downloadUrl'>
+    网申报名链接已复制到剪贴板，请使用手机浏览器，粘贴到地址栏并打开。
+  </view>
+  <view class='closeDownload' bindtap='_closeDownload'>我知道了</view>
+</view>

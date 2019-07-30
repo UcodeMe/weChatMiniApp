@@ -1,0 +1,56 @@
+<block wx:if="{{show}}">
+  <block wx:for="{{applicationList}}" wx:key="item">
+    <navigator url='/pages/job/detail?jobId={{item.jobInfo.jobId}}'>
+      <view class='job-top clearfix'>
+        <view class='job-tag' wx:if='{{item.jobInfo.jobTag}}'>直推岗位</view>
+        <view class='job-detail clearfix'>
+          <view class='jab-name'>{{item.jobInfo.jobName}}</view>
+          <view class='job-wages' wx:if='{{jobInfo.minSalary}}'>{{item.jobInfo.minSalary}}k-{{item.jobInfo.maxSalary}}k</view>
+          <view class='job-wages' wx:else>面议</view>
+        </view>
+
+
+
+        <view class='tagNames clearfix'>
+          <block wx:if="{{item.companyInfo.tagNames}}">
+            <view class='tags clearfix' wx:for="{{item.companyInfo.tagNames}}" wx:key="item">
+              <view>{{item}}</view>
+            </view>
+          </block>
+
+          <block wx:else>
+            <view class='tags clearfix'>
+              <view>福利好</view>
+            </view>
+          </block>
+        </view>
+
+
+
+        <view class='job-request clearfix'>
+          <view>招{{item.jobInfo.quantity}}人</view>
+          <view wx:if="{{item.jobInfo.intentEducationLevel == 'DOCTOR'}}">博士</view>
+          <view wx:if="{{item.jobInfo.intentEducationLevel == 'POSTGRADUATE'}}">研究生</view>
+          <view wx:if="{{item.jobInfo.intentEducationLevel == 'UNDERGRADUATE'}}">本科</view>
+          <view wx:if="{{item.jobInfo.intentEducationLevel == 'JUNIOR'}}">大专</view>
+          <view wx:if="{{item.jobInfo.intentEducationLevel == 'NOlIMIT'}}">不限</view>
+          <view>{{item.companyInfo.natureName}}</view>
+        </view>
+        <view class='company clearfix'>
+          <image class='companyLogo' src='{{item.companyInfo.companyLogo}}'></image>
+          <view class='companyName'>{{item.companyInfo.companyName}}</view>
+
+        </view>
+        <view class='job-save'>
+          <text>{{item.jobInfo.publishTime}}</text>
+          <text wx:if='{{item.jobInfo.publishTime}}'>发布</text>
+          <text wx:else>最近发布</text>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</block>
+
+<block wx:else>
+  <data-null />
+</block>

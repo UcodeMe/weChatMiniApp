@@ -1,0 +1,66 @@
+<view class='fixed-top'>
+  <view class='search-block'>
+    <search-bar id="searchBar" bind:tapSearch="_doSearch" />
+  </view>
+
+  <view class='search-tabbar'>
+    <tab-bar tabbar-items="{{['岗位','宣讲会','招聘会']}}" bind:afterSelect="_switchSwiper" tab-index="{{tabIndex}}" />
+  </view>
+  <block wx:if="{{regionName}}">
+    <complex-filter region-name="{{regionName}}" bind:doFilter="_doFilter" />
+  </block>
+  <block wx:else>
+    <complex-filter bind:doFilter="_doFilter" />
+  </block>
+</view>
+
+<view class='no-search-data' wx:if="{{noSearchData}}">
+  <no-search-data />
+</view>
+
+<!-- 岗位 -->
+<block wx:if="{{tabIndex == 0}}" wx:for="{{jobDataList}}" wx:key="item" wx:for-index="idx">
+  <navigator url='/pages/job/detail?jobId={{item.jobId}}'>
+    <view class="job-top clearfix {{idx > 0?'split-line':''}}">
+      <view class='job-detail clearfix'>
+        <view class='jab-name'>{{item.jobName}}</view>
+        <view class='job-wages' wx:if="{{item.minSalary}}">{{item.minSalary}}k-{{item.maxSalary}}k</view>
+        <view class='job-wages' wx:else>面议</view>
+      </view>
+      <view class='tagNames clearfix'>
+        <block wx:if="{{item.tagNames}}">
+          <view class='tags' wx:for="{{item.tagNames}}" wx:key="item">
+            <view>{{item}}</view>
+          </view>
+        </block>
+
+        <block wx:else>
+          <view class='tags'>
+            <view>福利好</view>
+          </view>
+        </block>
+      </view>
+      <view class='job-request clearfix'>
+
+        <view wx:if="{{item.intentEducationLevel == 'DOCTOR'}}">博士及以上学历</view>
+        <view wx:elif="{{item.intentEducationLevel == 'POSTGRADUATE'}}">研究生及以上学历</view>
+        <view wx:elif="{{item.intentEducationLevel == 'UNDERGRADUATE'}}">本科及以上学历</view>
+        <view wx:elif="{{item.intentEducationLevel == 'JUNIOR'}}">大专及以上学历</view>
+        <view wx:else>学历不限</view>
+        <view class='requirement' if="{{item.jobRequirement}}">| {{item.jobRequirement}}</view>
+
+      </view>
+      <view class='company clearfix'>
+        <image class='companyLogo' src='{{item.companyLogo}}'></image>
+        <view class='companyName'>{{item.companyName}}</view>
+        <view class='job-save'>{{item.publishTime}}发布</view>
+      </view>
+    </view>
+  </navigator>
+</block>
+
+<!-- 宣讲会 -->
+<block wx:if="{{tabIndex == 1}}" wx:for="{{publicizeList}}" wx:key="item" wx:for-index="idx">
+  <list-item-publicize company-logo="{{item.companyLogo}}" company-name="{{item.companyName}}" industry="{{item.company.companyTradeName}}" company-type="{{item.company.companyCharaName}}" date-time="{{item.dateTimeAsStr}}" address="{{item.publicAddr}}"
+    tag-items="{{item.tags}}" no-border="{{idx == 0}}" publicize-id="{{item.publicizeId}}" publicize-title="{{item.publicizeTitle}}" />
+</block>

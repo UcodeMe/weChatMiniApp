@@ -1,0 +1,33 @@
+/* pages/user/resume/index.wxss */
+
+.my-cv{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+}
+
+.my-cv>image{
+  width: 240rpx;
+  height: 300rpx;
+}
+.bottom-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx
+}
+.cv-button{
+  font-size: 36rpx;
+  color: white;
+  text-align: center;
+  background: #47BCB8;
+  width: 408rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50rpx
+}
+

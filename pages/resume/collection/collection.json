@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "报名采集",
+  "usingComponents": {
+    "text-tag": "/components/text-tag/index",
+    "split-show-more": "/components/split-show-more/split-show-more",
+    "more-detail": "/components/more-detail/more-detail",
+    "like-mask": "/components/like-mask/index",
+    "bottom-bar": "/components/bottom-bar/bottom-bar"
+  }
+}

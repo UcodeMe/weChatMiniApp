@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "地点选择",
+  "usingComponents": {
+    "no-search-data": "/components/no-search-data/index",
+    "search-bar": "/components/search-bar/index"
+  }
+}

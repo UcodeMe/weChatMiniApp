@@ -1,0 +1,21 @@
+<view class='region-block' style='height:{{pageHeight}}px'>
+  <scroll-view scroll-y class='left'>
+    <view class="region-item {{selectedProvinceId == item.id ? 'active':''}}" wx:for="{{provinceList}}" wx:key="item" wx:for-index="idx" data-id='{{item.id}}' bindtap='_selectProvince'>
+      {{item.regionName}}
+    </view>
+  </scroll-view>
+
+  <!-- 
+  <scroll-view scroll-y class='middle' wx:if="{{cityList.length >0}}">
+    <view class="region-item {{selectedCityId == item.id ? 'active':''}}" wx:for="{{cityList}}" wx:key="item" wx:for-index="idx" data-id='{{item.id}}' data-name="{{item.regionName}}" bindtap='_selectCity'>
+      {{item.regionName}}
+    </view>
+  </scroll-view> 
+  -->
+
+  <view class='right'>
+    <view class="region-city {{selectedCityId == item.id ? 'active':''}}" wx:for="{{cityList}}" wx:key="item" wx:for-index="idx" data-id='{{item.id}}' data-name="{{item.regionName}}" bindtap='_selectCity'>
+      {{item.regionName}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+@import "/assets/wxss/iconfont.wxss";
+@import "/assets/wxss/common.wxss";
+
+.cell-item {
+  height: 98rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+}
+
+.cell-item .icon-arrowright {
+  font-size: 32rpx;
+  padding-right: 12rpx;
+}
+
+.cell-item > text {
+  color: #333;
+  font-weight: bold;
+  font-size: 30rpx;
+  padding-left: 12rpx;
+}
+
+.cell-item > view {
+  display: flex;
+  align-items: center;
+}
+
+.cell-item > view text:nth-child(1) {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.2;
+}
+
+.bottom-split-line {
+  border-bottom: 0.333rpx solid #ebebeb;
+}

@@ -1,0 +1,105 @@
+<view class='list-content'>
+  <!-- 意向工作地点 -->
+  <navigator url='/pages/region/index?regionCategory=my'>
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-zhiyuandidian6' />
+      <text class='with-right-arrow'>意愿工作地点</text>
+      <view class='item-tag'>
+        <block wx:for="{{userInfo.intentRegionNames}}" wx:key="item" wx:for-index="idx">
+          <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+        </block>
+      </view>
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </navigator>
+
+
+
+
+
+  <!-- 目标行业 -->
+  <navigator url='/pages/user/intent-industry/index'>
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-xingye' />
+      <text>目标行业</text>
+
+      <view class='item-tag' wx:if="{{userInfo.intentIndustryNames && userInfo.intentIndustryNames.length > 0}}">
+        <block wx:for="{{userInfo.intentIndustryNames}}" wx:key="item" wx:for-index="idx">
+          <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+        </block>
+      </view>
+      <text class='set-right' wx:else>设置</text>
+
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </navigator>
+
+
+
+
+
+
+
+  <!-- 意向岗位 -->
+  <navigator url='/pages/user/intent-post/index'>
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-gangweitubiao' />
+      <text class='with-right-arrow'>意愿岗位</text>
+
+      <view class='item-tag' wx:if="{{userInfo.intentPostNames && userInfo.intentPostNames.length > 0}}">
+        <block wx:for="{{userInfo.intentPostNames}}" wx:key="item" wx:for-index="idx">
+          <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+        </block>
+      </view>
+      <text class='set-right' wx:else>设置</text>
+
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </navigator>
+
+
+
+
+
+
+  <!-- 目标企业类型 -->
+  <navigator url='/pages/user/company-scale/index'>
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-qiyehetongshenhe_huaban' />
+      <text class='with-right-arrow'>目标企业类型</text>
+
+      <view class='item-tag' wx:if="{{userInfo.intentCompanyScaleNames && userInfo.intentCompanyScaleNames.length > 0}}">
+        <block wx:for="{{userInfo.intentCompanyScaleNames}}" wx:key="item" wx:for-index="idx">
+          <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+        </block>
+      </view>
+      <text class='set-right' wx:else>设置</text>
+
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </navigator>
+
+
+
+
+
+
+
+  <!-- 求职状态 -->
+  <picker bindchange='_jobStatusChange' range="{{jobHuntingStatus}}" range-key='name' value="data">
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-liubodong' />
+      <text class='with-right-arrow'>求职状态</text>
+      <view class='item-tag'>
+        <text wx:if='{{onlineJobStatus == "LOOKING_FOR_JOB"}}'>正在求职</text>
+        <text wx:if='{{onlineJobStatus == "IN_PRACTICE"}}'>正在实习</text>
+        <text wx:if='{{onlineJobStatus == "PLAN_FOR_JOB"}}'>打算求职</text>
+        <text wx:if='{{onlineJobStatus == "PLAN_FOR_PRACTICE"}}'>打算实习</text>
+        <text wx:if='{{onlineJobStatus == "WORKING"}}'>已工作</text>
+      </view>
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </picker>
+
+
+</view>

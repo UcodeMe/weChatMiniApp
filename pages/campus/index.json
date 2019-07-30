@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "校招",
+  "onReachBottomDistance": 300,
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "text-tag": "/components/text-tag/index",
+    "search-bar": "/components/search-bar/index",
+    "swiper-banner": "/components/swiper-banner/index",
+    "complex-filter": "/components/complex-filter/index",
+    "data-null": "/components/data-null/index"
+  }
+}

@@ -1,0 +1,8 @@
+.swiper-banner {
+  height: 342rpx;
+}
+
+.swiper-banner image {
+  height: inherit;
+  width: 100%;
+}

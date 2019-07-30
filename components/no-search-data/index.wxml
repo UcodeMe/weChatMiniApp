@@ -1,0 +1,4 @@
+<view class='no-search-data'>
+  <text class='iconfont icon-none1'></text>
+  <view>没有找到相关内容，换个词试试吧</view>
+</view>

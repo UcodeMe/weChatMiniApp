@@ -1,0 +1,11 @@
+@import "/assets/wxss/weui.wxss";
+
+.weui-loadmore {
+  margin: 0 auto;
+}
+
+.split-show-more {
+  color: #ff6000;
+  font-size: 30rpx;
+  font-weight: 300;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "院系",
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index"
+  }
+}

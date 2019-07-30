@@ -1,0 +1,5 @@
+<view class='search-bar' noButton>
+  <text class='iconfont icon-search' />
+  <input type="text" class="search-input {{noButton? 'no-button' : ''}}" placeholder='搜索' bindinput="searchInputChange" value="{{inputText}}" focus="{{focus}}" confirm-type='搜索' bindconfirm="doSearch" />
+  <view wx:if="{{!noButton}}" bindtap='doSearch' class='btn-search'>搜索</view>
+</view>

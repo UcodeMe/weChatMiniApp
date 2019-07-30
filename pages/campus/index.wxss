@@ -1,0 +1,59 @@
+@import "/assets/wxss/common.wxss";
+@import "/assets/wxss/iconfont.wxss";
+@import "banner-featured.wxss";
+@import "item-job.wxss";
+@import "item-recommend.wxss";
+@import "item-publicize.wxss";
+
+.fixed-top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  /* border-bottom: 1rpx solid #eee; */
+}
+
+.all-list-top-fixed {
+  margin-top: 280rpx;
+}
+
+.search-bar {
+  max-width: 100%;
+  height: 56rpx;
+  line-height: 56rpx;
+  padding: 30rpx 40rpx 30rpx 38rpx;
+}
+
+.block-split {
+  border-top: 20rpx solid #ebebeb;
+}
+
+.nav-search {
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #666;
+  line-height: 94rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+
+.nav-search-fixed {
+  position: fixed;
+  top: 114rpx;
+  background: #fff;
+  width: 100%;
+  z-index: 99999;
+  box-shadow: 0 10rpx 30rpx -1rpx #f0f0f0;
+  padding-bottom: 20rpx;
+}
+
+.nav-active {
+  color: #60c4c1;
+}

@@ -1,0 +1,105 @@
+.publicize-info {
+  width: 100%;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  padding-top: 50rpx;
+  padding-bottom: 45rpx;
+}
+
+.publicize-info .info-block {
+  display: flex;
+}
+
+.publicize-info .hold-date {
+  color: #666;
+  font-size: 30rpx;
+  font-weight: bold;
+  padding-bottom: 35rpx;
+}
+
+.publicize-info .start-time {
+  text-align: center;
+  color: #f58131;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+
+.publicize-info .end-time {
+  color: #999;
+  font-size: 24rpx;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.publicize-info .hold-time {
+  width: 100rpx;
+  height: 100rpx;
+  background: #fff9f1;
+  border: 1rpx solid #ffbe90;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.publicize-info .right {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.publicize-info .company-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  max-width: 520rpx;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.publicize-info .company-logo {
+  border: 1rpx solid #eee;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.publicize-info .company-info {
+  display: flex;
+  align-items: center;
+}
+
+.publicize-info .company-extra-info {
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+.publicize-info .nature-name, .publicize-info .industry-names {
+  color: #999;
+  font-size: 24rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 500rpx;
+}
+
+.publicize-info .publicize-address {
+  color: #999;
+  font-size: 24rpx;
+  max-width: 600rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.publicize-info .tags {
+  margin-top: 12rpx;
+}
+
+.publicize-info .split-line {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}

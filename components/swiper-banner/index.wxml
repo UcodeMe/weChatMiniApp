@@ -1,0 +1,7 @@
+<swiper class='swiper-banner' autoplay='true' indicator-dots='true' circular='true'>
+  <block wx:for="{{imageList}}" wx:key="item">
+    <swiper-item>
+      <image mode='scaleToFill' src='{{item.picUrl}}' bindtap='_showDetail' data-link-Type="{{item.linkType}}" data-id="{{item.linkId}}" />
+    </swiper-item>
+  </block>
+</swiper>

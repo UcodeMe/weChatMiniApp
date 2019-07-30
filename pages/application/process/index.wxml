@@ -1,0 +1,45 @@
+<view class='main-top clearfix'>
+  <view class='job-list clearfix'>
+    <view class='job-nam'>{{jobInfo.jobName}}</view>
+    <view class='job-address'>工作地点：{{jobInfo.regionNames}}</view>
+    <view class='have-num'>直推名额：{{jobInfo.quantity}}</view>
+    <view class='job-conditions' wx:if="{{jobInfo.intentEducationLevel == 'DOCTOR'}}">学历要求：博士</view>
+    <view class='job-conditions' wx:if="{{jobInfo.intentEducationLevel == 'POSTGRADUATE'}}">学历要求：研究生</view>
+    <view class='job-conditions' wx:if="{{jobInfo.intentEducationLevel == 'UNDERGRADUATE'}}">学历要求：本科</view>
+    <view class='job-conditions' wx:if="{{jobInfo.intentEducationLevel == 'JUNIOR'}}">学历要求：大专</view>
+    <view class='job-conditions' wx:if="{{jobInfo.intentEducationLevel == 'NOlIMIT'}}">学历要求：不限</view>
+    <!-- <view class='job-conditions' wx:else>学历要求：不限</view> -->
+    <view class='job-conditions' wx:if='{{jobInfo.specialtyNames}}'>专业要求：{{jobInfo.specialtyNames}}</view>
+    <view class='job-conditions' wx:else>专业要求：不限</view>
+  </view>
+</view>
+<view class='workflow-title'>服务流程</view>
+
+<view class='process-block' wx:if='{{jobMine.processList && jobMine.processList.length != 0}}'>
+  <interview-process-2 node-names="{{jobMine.processList}}" />
+</view>
+<view class='track-list-father'>
+  <view class='track-list' style='height:{{trackH}}'>
+    <view wx:for='{{jobMine.trackList}}' wx:key='item'>
+      <text>{{item.createTime}}</text>
+      <text>{{item.remark}}</text>
+    </view>
+  </view>
+
+  <view class='track-list-more' wx:if="{{trackShow}}" bindtap='_trackMore'>
+    <view>
+      查看更多
+      <text class='iconfont icon-arrowright'></text>
+    </view>
+  </view>
+  
+</view>
+<view class='cv'>你的简历</view>
+
+<view class='cv-img'>
+  <image src='{{cvInfor}}' bindtap='_viewFile'></image>
+</view>
+
+<view class='cv-cancel'>
+  <view class='btn-cancel' bindtap='_cancelApp'>取消报名</view>
+</view>

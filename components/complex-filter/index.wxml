@@ -1,0 +1,124 @@
+<view class="complex-filter">
+  <view class='first-line'>
+    <view class='region' bindtap='_showRegion'>{{regionName}}</view>
+    <view class='industry' bindtap='_showIndustry'>
+      <view>所属行业</view>
+      <view class="arrow {{showIndustry?'active':''}}" />
+    </view>
+    <view class='nature' bindtap='_showNature'>
+      <view>企业性质</view>
+      <view class="arrow {{showNature?'active':''}}" />
+    </view>
+
+    <!--
+    <view class='filter'>
+      <view class='iconfont icon-shaixuan'></view>
+      <view>筛选</view>
+    </view>
+    -->
+
+    <view wx:if="{{showSalaryFilter}}" class='filter salary-filter' bindtap='_doSalarySort'>
+      <view>薪资</view>
+      <view wx:if="{{salarySort == 'desc'}}" class='iconfont icon-shangsheng'></view>
+      <view wx:elif="{{salarySort == 'asc'}}" class='iconfont icon-xingzhuang'></view>
+      <view wx:else class='iconfont icon-shaixuan'></view>
+    </view>
+
+  </view>
+  <view class='second-line'>
+    <view class='scale' bindtap='_showScale'>
+      <view>发展阶段</view>
+      <view class="arrow {{showScale?'active':''}}" />
+    </view>
+    <view class='staff-count' bindtap='_showStaffCount'>
+      <view>企业规模</view>
+      <view class="arrow {{showStaffCount?'active':''}}" />
+    </view>
+    <view class='intents' bindtap='_showIntents'>
+      <view>应聘门槛</view>
+      <view class="arrow {{showIntents?'active':''}}" />
+    </view>
+    <view class='position' bindtap='_showPosition'>
+      <view>行业地位</view>
+      <view class="arrow {{showPosition?'active':''}}" />
+    </view>
+  </view>
+
+
+  <view class='conditon-block' wx:if="{{showFilter}}">
+    <scroll-view scroll-y style='max-height:300rpx;'>
+      <!-- 行业 -->
+      <view class='condition-content' wx:if="{{showIndustry}}">
+        <view class="{{item.selected?'active':''}}" wx:for="{{industryList}}" wx:key="key" wx:for-item="item" wx:for-index="idx" bindtap='_selectIndustry' data-id='{{item.id}}'>
+          {{item.industryName}}
+        </view>
+      </view>
+
+
+      <!-- 企业性质 -->
+      <view class='condition-content' wx:if="{{showNature}}">
+        <view class="{{item.selected?'active':''}}" wx:for="{{natureList}}" wx:key="key" wx:for-item="item" wx:for-index="idx" bindtap='_selectNature' data-id="{{item.id}}">
+          {{item.natureName}}
+        </view>
+      </view>
+
+
+      <!-- 发展阶段 -->
+      <view class='condition-content' wx:if="{{showScale}}">
+        <view class="{{item.selected?'active':''}}" wx:for="{{scaleList}}" wx:key="key" wx:for-item="item" wx:for-index="idx" bindtap='_selectScale' data-id='{{item.id}}'>
+          {{item.scaleName}}
+        </view>
+      </view>
+
+
+      <!-- 企业规模 -->
+      <view class='condition-content' wx:if="{{showStaffCount}}">
+        <view class="{{item.selected?'active':''}}" wx:for="{{staffCountList}}" wx:key="key" wx:for-item="item" wx:for-index="idx" bindtap='_selectStaffCount' data-id='{{item.id}}'>
+          {{item.label}}
+        </view>
+      </view>
+
+
+
+      <!-- 应聘门槛 -->
+      <view class='condition-content' wx:if="{{showIntents}}">
+        <!-- 学校要求 -->
+        <text class='inner-title'>
+          学校要求
+        </text>
+        <view class="{{item.selected?'active':''}}" wx:for="{{schoolLevelList}}" wx:key="key" wx:for-item="item" wx:for-index="idx" bindtap='_selectSchoolLevel' data-id='{{item.id}}'>
+          {{item.label}}
+        </view>
+        <!-- 学历要求 -->
+        <text class='inner-title'>
+          学历要求
+        </text>
+        <view class="{{item.selected?'active':''}}" wx:for="{{educationList}}" wx:key="key" wx:for-item="item" wx:for-index="idx" bindtap='_selectEducation' data-id='{{item.id}}'>
+          {{item.label}}
+        </view>
+        <!-- 录用偏好 -->
+        <text class='inner-title'>
+          录用偏好
+        </text>
+        <view class="{{item.selected?'active':''}}" wx:for="{{studentLevelList}}" wx:key="key" wx:for-item="item" wx:for-index="idx" bindtap='_selectStudentLevel' data-id='{{item.id}}'>
+          {{item.label}}
+        </view>
+      </view>
+
+
+
+      <!-- 行业地位 -->
+      <view class='condition-content' wx:if="{{showPosition}}">
+        <view class="{{item.selected?'active':''}}" wx:for="{{positionList}}" wx:key="key" wx:for-item="item" wx:for-index="idx" bindtap='_selectPosition' data-id='{{item.id}}'>
+          {{item.positionName}}
+        </view>
+      </view>
+    </scroll-view>
+    <view class='buttons'>
+      <view class='reset' bindtap='_doReset'>重置</view>
+      <view class='confirm' bindtap='_doFilter'>确定</view>
+    </view>
+  </view>
+
+  <view class='mask-block'></view>
+</view>

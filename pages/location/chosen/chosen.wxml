@@ -1,0 +1,19 @@
+<view class='top-search' wx:if="{{false}}">
+  <search-bar bind:searchInputChange="_searchInputChange" bind:tapSearch="_doSearch" noButton/>
+</view>
+
+<view class='no-search-data'>
+  <no-search-data wx:if="{{noSearchData}}" />
+</view>
+
+<view class='list-content'>
+  <checkbox-group bindchange="_onChange">
+    <block wx:for="{{regionList}}" wx:key="item" wx:for-index="idx">
+
+      <view class="checkbox-item {{idx == 0 ? '':'split-line'}}">
+        <text class='item-name'>{{item.regionName}}</text>
+        <checkbox value='{{item.id}}' checked='{{!!item.checked}}' />
+      </view>
+    </block>
+  </checkbox-group>
+</view>

@@ -1,0 +1,44 @@
+<view class="user-center">
+  <view class='header-gender'>
+    <image mode='scaleToFill' src='{{userInfo.avatarUrl}}' class='avatar' />
+    <view wx:if="{{userInfo.gender=='MALE'}}" class='gender-male'>
+      <text class="iconfont icon-sexm"></text>
+    </view>
+    <view wx:else class='gender-female'>
+      <text class="iconfont icon-sexw"></text>
+    </view>
+  </view>
+  <view class='name-age'>
+    <text class='user-name'>{{userInfo.realName}}</text>
+    <text wx:if="{{userInfo.age> 0}}" class='user-age'>{{userInfo.age}}岁</text>
+  </view>
+  <view class='school-major'>
+    <text wx:if="{{userInfo.secondSchoolName}}">学校：{{userInfo.secondSchoolName}}</text>
+    <text wx:if="{{userInfo.secondMajorName}}" class='spliter-line'> |</text>
+    <text wx:if="{{userInfo.secondMajorName}}">专业：{{userInfo.secondMajorName}}</text>
+  </view>
+  <view class='some-collection'>
+    <navigator url='/pages/user/follow-company/index'>
+      <view>
+        <image mode='scaleToFill' class='collection-item' src='http://qiniu.meefine.com/guanzhuqiye.png'></image>
+        <view class='txt'>关注企业</view>
+      </view>
+    </navigator>
+    <navigator url='/pages/user/follow-post/index'>
+      <view>
+        <image mode='scaleToFill' class='collection-item' src='http://qiniu.meefine.com/guanzhugangwei.png'></image>
+        <view class='txt'>关注岗位</view>
+      </view>
+    </navigator>
+    <view bindtap='_jobfairs'>
+      <image mode='scaleToFill' class='collection-item' src='http://qiniu.meefine.com/zhaopinhui.png'></image>
+      <view class='txt'>招聘会</view>
+    </view>
+    <navigator url='/pages/user/my-resume/index'>
+      <view>
+        <image mode='scaleToFill' class='collection-item' src='http://qiniu.meefine.com/wodejianli.png'></image>
+        <view class='txt'>我的简历</view>
+      </view>
+    </navigator>
+  </view>
+</view>

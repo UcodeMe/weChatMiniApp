@@ -1,0 +1,8 @@
+<!-- <view class='my-cv clearfix'>
+  <image src='http://qiniu.meefine.com/update.png'></image>
+</view>
+<view class='bottom-button'>
+  <view class='cv-button'>上传简历</view>
+</view> -->
+
+<web-view src="{{url}}?token={{token}}&baseurl={{baseUrl}}" bindmessage="getMessage"></web-view>

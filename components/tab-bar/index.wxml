@@ -1,0 +1,7 @@
+<scroll-view scroll-x>
+  <view class="tab-bar">
+    <block wx:for="{{tabbarItems}}" wx:key="item" wx:for-index="idx">
+      <view class="outer-class-bottom-padding outer-class-not-active {{tabIndex == idx ?'active':''}}" bindtap="onTap" data-current="{{idx}}">{{item}}</view>
+    </block>
+  </view>
+</scroll-view>

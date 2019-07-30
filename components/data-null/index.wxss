@@ -1,0 +1,17 @@
+@import "/assets/wxss/iconfont.wxss";
+
+.no-data {
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  height: 100%;
+  width: 100%;
+}
+
+.no-data >image {
+  height: 246rpx;
+  width: 322rpx;
+  margin-top:408rpx;
+  /* margin-left: 27rpx; */
+  margin-bottom: 30rpx;
+}

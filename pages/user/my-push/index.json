@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "data-null": "/components/data-null/index",
+    "interview-process-2": "/components/interview-process-2/index"
+  }
+}

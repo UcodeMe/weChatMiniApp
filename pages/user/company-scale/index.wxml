@@ -1,0 +1,12 @@
+<view class='no-search-data'>
+  <no-search-data wx:if="{{noSearchData}}" />
+</view>
+
+<view class='list-content'>
+  <block wx:for="{{companyScaleList}}" wx:key="item" wx:for-index="idx">
+    <view class="checkbox-item {{idx == 0 ? '':'split-line'}}" data-id='{{item.id}}' bindtap='_onChange'>
+      <text class='item-name'>{{item.name}}</text>
+      <view wx:if="{{item.checked}}" class="iconfont icon-chenggong" />
+    </view>
+  </block>
+</view>

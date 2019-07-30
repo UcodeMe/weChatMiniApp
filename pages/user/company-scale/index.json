@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "企业类型",
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index"
+  }
+}

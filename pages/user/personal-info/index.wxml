@@ -1,0 +1,64 @@
+<view class="info-top">
+  <image mode='scaleToFill' src='{{userInfo.avatarUrl}}' class='avatar' />
+  <view class='camera-block'>
+    <text class='iconfont icon-camera_fill' />
+  </view>
+</view>
+
+<view class='first-block'>
+  <navigator url="/pages/user/personal-info/real-name/index?textVal={{userInfo.realName ? userInfo.realName:''}}">
+    <line-cell cell-name="姓名" cell-value="{{userInfo.realName}}" />
+  </navigator>
+  <picker bindchange='_onGenderChange' range="{{['男','女']}}">
+    <line-cell cell-name="性别" cell-value="{{userInfo.gender == 'MALE'?'男':'女'}}" />
+  </picker>
+  <picker mode="date" value="{{userInfo.birthday.length}}" start="1990-01-01" end="2000-12-31" bindchange="_onBirthdayChange">
+    <block wx:if='{{userInfo.birthday}}'>
+      <line-cell cell-name="出生年月" cell-value="{{userInfo.birthday}}" />
+    </block>
+    <block wx:else>
+      <line-cell cell-name="出生年月" cell-value="请选择日期" />
+    </block>
+  </picker>
+</view>
+
+<view class='second-block'>
+  <navigator url='/pages/user/personal-info/select-school/index'>
+    <line-cell cell-name="学校" cell-value="{{userInfo.secondSchoolName}}" noBorder />
+  </navigator>
+
+  <navigator url='/pages/user/personal-info/select-institute/index'>
+    <line-cell cell-name="院系" cell-value="{{userInfo.secondInstituteName}}" />
+  </navigator>
+
+  <navigator url='/pages/user/personal-info/select-major/index'>
+    <view class='major-info'>
+      <line-cell cell-name="专业" cell-value="{{userInfo.secondMajorName}}" />
+    </view>
+  </navigator>
+
+  <picker bindchange='_onEducationChange' range="{{educationList}}" range-key='educationName'>
+    <line-cell cell-name="学历" cell-value="{{educationLevelName}}" />
+  </picker>
+  <picker mode="date" value="{{entryTime}}" start="2016-09" end="2060-09" fields="month" bindchange="_onEntryTimeChange">
+    <line-cell cell-name="入学年份" cell-value="{{userInfo.entryTime}}" />
+  </picker>
+</view>
+
+<view class='third-block'>
+  <view class="grant-block" wx:if="{{userInfo.mobile == null || userInfo.mobile == ''}}">
+    <view>
+      <text class='iconfont icon-weixin' />
+      <button class='btn-get-phone' plain open-type="getPhoneNumber" bindgetphonenumber="_getPhoneNumber">
+        绑定手机号
+      </button>
+    </view>
+  </view>
+  <view bindtap='_editMobileNumber' wx:else>
+    <line-cell cell-name="手机号码" cell-value="{{userInfo.mobile}}" noBorder />
+  </view>
+</view>
+
+<view class='fourth-block'>
+  <button bindtap='_saveInfo'>保存</button>
+</view>

@@ -1,0 +1,78 @@
+<view class='timetable-list'>
+  <view class='list-M'>
+    <view>{{month}}</view>
+    <text>月</text>
+  </view>
+  <view class='timetable-right'>
+    <view class='list-week'>
+      <block wx:for="{{dateInfo.week}}" wx:key="item">
+        <view class='list-w'>{{item}}</view>
+      </block>
+    </view>
+    <view class='list-date'>
+      <block wx:for="{{dateInfo.date}}" wx:key="item" wx:for-index="idx">
+        <view class='list-d {{clickNum==idx ? "active":""}}' bindtap='_clickDtae' data-fulldate='{{idx}}'>{{item}}</view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class='choose-time'>
+  <text>{{dateInfo.fullDate2[clickNum]}} 周{{dateInfo.week[clickNum]}}</text>
+  <text class='place'>南京</text>
+  <text class='iconfont icon-xia'></text>
+</view>
+
+<view class='main-list clearfix' wx:if="{{publicizeList.length > 0}}">
+
+  <view wx:for="{{publicizeList}}" wx:key="item" class='clearfix'>
+    <view class='time-line'>
+      <view class='start-time'>{{item.startTime}}</view>
+      <view class='end-time'>—{{item.endTime}}</view>
+      <image wx:if="{{idx > 0}}" src='http://qiniu.meefine.com/xuanjiangline.png'></image>
+    </view>
+    <view class='company clearfix'>
+      <view class='company-top clearfix'>
+        <image src='{{item.companyLogo}}'></image>
+        <view class='company-right'>
+          <view class='name-line'>
+            <text class='company-name'>{{item.companyName}}</text>
+            <text class='industry-name'>头部标杆企业</text>
+          </view>
+          <view class='compony-bottom clearfix'>
+            <view class='natureName' wx:if="{{item.natureName}}">企业性质：{{item.natureName}}</view>
+            <view class='natureName' wx:else>企业性质：未知</view>
+            <view class='industryNames' wx:if="{{item.industryNames}}"> | 所属行业：{{item.industryNames}}</view>
+            <view class='industryNames' wx:else> | 所属行业：未知</view>
+          </view>
+        </view>
+      </view>
+      <view class='bottom-address'>地点：{{item.place}}</view>
+      <view class='tagNames clearfix'>
+        <view class='tagTitle'>推荐理由：</view>
+        <block wx:if="{{item.companyInfo.tagNames}}">
+          <view class='tags' wx:for="{{item.tagNames}}" wx:key="item">
+            <view>{{item}}</view>
+          </view>
+        </block>
+
+        <block wx:else>
+          <view class='tags'>
+            <view>福利好</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view wx:else class='no-publicize'>暂无宣讲会信息</view>
+
+<view class='share'>
+  <text>分享:</text>
+  <button open-type='share'>
+    <image src='http://qiniu.meefine.com/wechat.png'></image>
+  </button>
+  <image src='http://qiniu.meefine.com/friend.png' bindtap='_savePhoto'></image>
+  <view class='save-img' bindtap='_savePhoto'>保存为图片</view>
+</view>

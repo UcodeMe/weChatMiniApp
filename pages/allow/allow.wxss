@@ -1,0 +1,28 @@
+@import "/assets/wxss/iconfont.wxss";
+
+.operation-block image {
+  width: 100%;
+}
+
+.operation-block .icon-weixin {
+  color: #fff;
+  position: relative;
+  top: 16rpx;
+  margin-right: 13rpx;
+  width: 56rpx;
+  height: 46rpx;
+}
+
+.operation-block .operation {
+  position: absolute;
+  top: 900rpx;
+  width: 100%;
+}
+
+.operation button {
+  background-color: #47bcb8;
+  width: 501rpx;
+  color: #fff;
+  overflow: hidden;
+  line-height: 80rpx;
+}

@@ -1,0 +1,109 @@
+<block wx:if="{{shown}}">
+  <view class="info-container">
+  <view class="success-tip">
+        <image  src='/assets/images/success.png' />
+        <view class="tip">提交成功！</view>
+         <view class="sub-tip first"> 补充以下信息，</view>
+         <view class="sub-tip">以便我们将最好的你推荐给优秀企业</view>
+  </view>
+    <view class="user-center">
+      <navigator url='/pages/user/work-place/index'>
+        <view class='level-2'>
+        <view class="level-left"> 
+          <image class="tip-img" src="/assets/images/location.png" />
+          <text>想在哪里工作</text>
+        </view>
+        <view class='level-right'>
+          <view class='item-tag' wx:if="userInfo && userInfo.intentRegionNames instanceof Array &&  userInfo.intentRegionNames.length>0">
+            <block wx:for="{{userInfo.intentRegionNames}}" wx:key="item" wx:for-index="idx">
+              <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+            </block>
+          </view>
+          <text wx:else>设置</text>
+          <text class='iconfont icon-arrowright' />
+          </view>
+        </view>
+      </navigator>
+      <navigator url='/pages/resume/information/industry/industry'>
+        <view class='level-2'>
+               <view class="level-left"> 
+          <image class="tip-img" src="/assets/images/industry.png" />
+          <text>想从事什么行业</text>
+          </view>
+            <view class='level-right'>
+          <view class='item-tag' wx:if="userInfo && userInfo.intentIndustryNames instanceof Array &&  userInfo.intentIndustryNames.length>0">
+            <block wx:for="{{userInfo.intentIndustryNames}}" wx:key="item" wx:for-index="idx">
+              <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+            </block>
+          </view>
+          <text wx:else>设置</text>
+          <text class='iconfont icon-arrowright' />
+          </view>
+        </view>
+      </navigator>
+      <navigator url='/pages/user/center/intent-post/chosen'>
+        <view class='level-2'>
+               <view class="level-left"> 
+          <image class="tip-img" src="/assets/images/post.png" />
+          <text>喜欢的岗位</text>
+          </view>
+               <view class='level-right'>
+          <view class='item-tag' wx:if="userInfo && userInfo.intentPostNames instanceof Array &&  userInfo.intentPostNames.length>0">
+            <block wx:for="{{userInfo.intentPostNames}}" wx:key="item" wx:for-index="idx">
+              <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+            </block>
+          </view>
+          <text wx:else>设置</text>
+          <text class='iconfont icon-arrowright' />
+          </view>
+        </view>
+      </navigator>
+        <navigator url='/pages/user/center/company-scale/chosen'>
+        <view class='level-2'>
+          <view class="level-left"> 
+            <image class="tip-img" src="/assets/images/company.png" />
+            <text>目标企业类型</text>
+          </view>
+              <view class='level-right'>
+          <view class='item-tag' wx:if="userInfo && userInfo.intentCompanyScaleNames instanceof Array &&  userInfo.intentCompanyScaleNames.length>0">
+            <block wx:for="{{userInfo.intentCompanyScaleNames}}" wx:key="item" wx:for-index="idx">
+              <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+            </block>
+          </view>
+          <text wx:else>设置</text>
+          <text class='iconfont icon-arrowright' />
+          </view>
+        </view>
+      </navigator>
+      <navigator url='/pages/resume/information/job-status/job-status'>
+        <view class='level-2 last-item'>
+               <view class="level-left"> 
+          <image class="tip-img" src="/assets/images/status.png" />
+          <text>目前的求职状态</text>
+          </view>
+              <view class='level-right'>
+          <view class='item-tag' wx:if="userInfo && userInfo.intentRegionNames instanceof Array &&  userInfo.intentRegionNames.length>0">
+            <block wx:for="{{userInfo.intentRegionNames}}" wx:key="item" wx:for-index="idx">
+              <text class="{{idx == 0?'':'spliter'}}">{{item}}</text>
+            </block>
+          </view>
+          <text wx:else>设置</text>
+          <text class='iconfont icon-arrowright' />
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class='job-bottom'>
+    <button>
+          提交
+        </button>
+         <navigator url='/pages/company/index'>
+        <text class='cancel-tip'> 以后再说</text>
+        </navigator>
+    </view>
+
+</view>
+
+
+
+</block>

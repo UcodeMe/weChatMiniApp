@@ -1,0 +1,7 @@
+<view class='location-search'>
+  <view class='region'>南京</view>
+  <text class='iconfont icon-coordinates1' />
+  <view class='search-block' bindtap='_doSearch'>
+    <search-bar noButton />
+  </view>
+</view>

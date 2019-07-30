@@ -1,0 +1,23 @@
+<view class='follow-qrcode' wx:if="{{showQrCode}}" bindtap='_closeMask'>
+  <view class='inner'>
+    <view class='iconfont icon-delete'></view>
+    <view class='title'>
+      关注微信公众号，第一时间获得接收该企业校招信息
+    </view>
+
+    <view class='block-btn'>
+      <image src="http://qiniu4.meefine.com/resource/zhichu_gzh_qrcode.jpg" mode='aspectFit' />
+      <view class='help-name'>
+        职初求职助手
+      </view>
+      <view class='btn-download' bindtap='_downloadQrcode'>
+        下载二维码
+      </view>
+    </view>
+
+    <view class='using-tips'>
+      使用相册扫一扫，从相册选择下载的二维码 ，打开并关注 。
+    </view>
+
+  </view>
+</view>

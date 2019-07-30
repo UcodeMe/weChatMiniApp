@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "严选",
+  "onReachBottomDistance": 100,
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "interview-process": "/components/interview-process/index",
+    "search-bar": "/components/search-bar/index",
+    "swiper-banner": "/components/swiper-banner/index"
+  }
+}

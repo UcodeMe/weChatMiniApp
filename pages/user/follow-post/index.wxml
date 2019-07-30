@@ -1,0 +1,28 @@
+<view class='focus-tip'>关注岗位后，该岗位关联的宣讲会、招聘会及岗位机会会通过消息及时通知你。</view>
+<block wx:for="{{focusList}}" wx:key="item">
+  <view class='focus-list'>
+    <view class='post-name'>{{item.postName}}</view>
+    <block wx:if='{{item.unfollowed}}'>
+      <view class=' focus-button get_follow' data-id='{{item.postId}}' data-index="{{index}}" data-name='{{item.postName}}' bindtap='_setFllow'>关注</view>
+    </block>
+    <block wx:else>
+      <view class='focus-button' data-id='{{item.postId}}' data-index="{{index}}" data-name='{{item.postName}}' bindtap='_unFollow'>已关注</view>
+    </block>
+  </view>
+</block>
+
+<view class='myPost'>
+  <view class='title' wx:if='{{postList.length > 0}}'>
+    <view class='title-left'>我的意愿岗位</view>
+    <view class='title-right'>点击“+”添加到关注岗位</view>
+  </view>
+  <view class='post-list'>
+    <view class='post-list-item' wx:for='{{postList}}' wx:key='item' data-id='{{item.postId}}' bindtap='_setFllow'>
+      <text>{{item.postName}}</text>
+      <text>+</text>
+    </view>
+  </view>
+  <navigator url='/pages/user/intent-post/index'>
+    <view class='post-set'>管理意愿岗位</view>
+  </navigator>
+</view>

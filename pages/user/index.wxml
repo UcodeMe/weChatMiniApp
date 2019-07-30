@@ -1,0 +1,30 @@
+<block wx:if="{{shown}}">
+  <block wx:if="{{userInfo.avatarUrl}}">
+    <include src="user-top.wxml" />
+
+    <view class='page-line' />
+
+    <include src="user-middle.wxml" />
+
+    <view class='page-line' />
+
+    <include src="user-bottom.wxml" />
+
+    <view class='page-line' />
+
+    <view class='list-content'>
+      <navigator url='/pages/user/personal-info/index'>
+        <view class='level-2 list-item'>
+          <text class='iconfont icon-setting' />
+          <text class='with-right-arrow'>个人资料管理</text>
+          <text class='iconfont icon-arrowright' />
+        </view>
+      </navigator>
+    </view>
+
+    <view class='page-line' />
+    
+    <view style='width:100%;height:60rpx;background-color:#fff;'>
+    </view>
+  </block>
+</block>

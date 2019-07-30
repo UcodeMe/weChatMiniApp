@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "学校",
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index"
+ }
+}

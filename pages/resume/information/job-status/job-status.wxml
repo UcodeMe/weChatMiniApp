@@ -1,0 +1,17 @@
+
+
+
+<view class='no-search-data'>
+  <no-search-data wx:if="{{noSearchData}}" />
+</view>
+
+<view class='list-content'>
+  <checkbox-group bindchange="_onChange">
+    <block wx:for="{{postList}}" wx:key="item" wx:for-index="idx">
+      <view class="checkbox-item {{idx ==0 ? '':'split-line'}}">
+        <text class='item-name'>{{item.jobStatusListName}}</text>
+        <checkbox value='{{item.id}}' checked='{{!!item.checked}}' />
+      </view>
+    </block>
+  </checkbox-group>
+</view>

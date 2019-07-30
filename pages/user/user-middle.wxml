@@ -1,0 +1,31 @@
+<view class='list-content'>
+  <navigator url='/pages/user/my-push/index'>
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-chenggong' />
+      <text class='with-right-arrow'>我的直推（{{userInfo.directRecommendCount}}）</text>
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </navigator>
+  <navigator url='/pages/user/my-application/index'>
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-wangluo' />
+      <text class='with-right-arrow'>我的网申（{{userInfo.onlineApplyCount}}）</text>
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </navigator>
+  <navigator url='/pages/user/my-resume/index'>
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-wodejianli-jibenxinxi' />
+      <text class='with-right-arrow'>我的简历</text>
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </navigator>
+
+  <navigator url='/pages/user/my-collection/index'>
+    <view class='level-2 list-item'>
+      <text class='iconfont icon-like' />
+      <text class='with-right-arrow'>我的收藏</text>
+      <text class='iconfont icon-arrowright' />
+    </view>
+  </navigator>
+</view>

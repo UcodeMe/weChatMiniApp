@@ -1,0 +1,21 @@
+@import "/assets/wxss/common.wxss";
+@import "/assets/wxss/iconfont.wxss";
+
+.top-search {
+  padding: 0 26rpx;
+}
+
+.list-content {
+  margin: 18rpx 18rpx 0rpx 18rpx;
+}
+
+.no-search-data {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+}
+
+.icon-chenggong {
+  color: #ff9244;
+  font-size: 38rpx;
+}

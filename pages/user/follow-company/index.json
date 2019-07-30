@@ -1,0 +1,6 @@
+{
+ "navigationBarTitleText": "关注企业",
+  "usingComponents": {
+    "data-null": "/components/data-null/index"
+  }
+}

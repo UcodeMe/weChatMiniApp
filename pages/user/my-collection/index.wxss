@@ -1,0 +1,144 @@
+@import "/assets/wxss/common.wxss";
+@import "/assets/wxss/iconfont.wxss";
+
+.page-line {
+  width: 100%;
+  height: 20rpx;
+  background: #eee;
+}
+
+.job-top {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 50rpx;
+  padding-top: 42rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+}
+
+.job-top .job-tag {
+  position: absolute;
+  height: 35rpx;
+  width: 87rpx;
+  background-color: #ff9244;
+  color: #fff;
+  text-align: center;
+  padding: 5rpx 2rpx 5rpx 13rpx;
+  font-size: 18rpx;
+  border-bottom-left-radius: 32rpx;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.jab-name, .job-wages {
+  font-size: 36rpx;
+  font-weight: bolder;
+}
+
+.jab-name {
+  float: left;
+  color: #333;
+}
+
+.job-wages {
+  float: right;
+  color: #47bcb8;
+}
+
+.job-request {
+  max-width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.job-request>view {
+  float: left;
+  font-size: 24rpx;
+  color: #999;
+  max-width: 30%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.job-request>view:nth-child(1), .job-request>view:nth-child(2) {
+  box-sizing: border-box;
+  border-right: 1rpx solid #999;
+  padding-right: 20rpx;
+  margin-right: 20rpx;
+}
+
+.job-place {
+  color: #333;
+  font-size: 24rpx;
+  margin-bottom: 26rpx;
+}
+
+.job-save {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 2;
+  float: right;
+}
+
+.company {
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.companyLogo {
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  vertical-align: middle;
+  border: 1rpx solid #ccc;
+}
+
+.companyName {
+  float: left;
+  color: #666;
+  font-size: 30rpx;
+  margin: 0 10rpx;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tagNames {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 16rpx;
+}
+
+.tagNames .tags {
+  font-size: 22rpx;
+  color: #f57921;
+  /* margin-top: 20rpx; */
+  float: left;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tags>view {
+  height: 33rpx;
+  line-height: 33rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  border-radius: 33rpx;
+  background-color: #fff9f1;
+  margin-right: 20rpx;
+  text-align: center;
+  white-space: nowrap;
+}

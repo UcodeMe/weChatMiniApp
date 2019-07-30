@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "专业",
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index"
+  }
+}

@@ -1,0 +1,39 @@
+<navigator url='/pages/job/detail?jobId={{jobId}}'>
+  <view class="job-block">
+  <view class='selection-tag' wx:if='{{jobCategory == "SELECTION"}}'>直推岗位</view>
+    <view class='first-line'>
+      <view class='job-name'>{{jobName}}</view>
+      <view class='salary'>
+        <block wx:if='{{minSalary && maxSalary}}'>
+          {{minSalary}}k-{{maxSalary}}k
+        </block>
+        <block wx:else>面议</block>
+      </view>
+    </view>
+    <view class='second-line '>
+      <view class='tags'>
+        <text-tag tag-items="{{tagNames}}" default-if-empty="发展空间大" />
+      </view>
+    </view>
+
+
+    <view class='requirement'>
+      <view wx:if="{{intentEducationLevel == 'DOCTOR'}}">博士及以上学历</view>
+      <view wx:elif="{{intentEducationLevel == 'POSTGRADUATE'}}">研究生及以上学历</view>
+      <view wx:elif="{{intentEducationLevel == 'UNDERGRADUATE'}}">本科及以上学历</view>
+      <view wx:elif="{{intentEducationLevel == 'JUNIOR'}}">大专及以上学历</view>
+      <view wx:else>学历不限</view>
+      <view class='split-line'>|</view>
+      <view if="{{jobRequirement}}">{{jobRequirement}}</view>
+    </view>
+
+
+    <view class='logo-name'>
+      <view class='view-image'>
+        <image src='{{companyLogo}}'></image>
+      </view>
+      <view class='company-name'>{{companyName}}</view>
+      <view class='publish-time'>{{publishTime}} 发布</view>
+    </view>
+  </view>
+</navigator>

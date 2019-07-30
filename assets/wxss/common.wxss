@@ -1,0 +1,22 @@
+.split-line {
+  border-top: 0.5rpx solid #ebebeb;
+}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.checkbox-item {
+  height: 98rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12rpx;
+}
+
+.checkbox-item .item-name {
+  color: #333;
+  font-size: 30rpx;
+}
+
+view, text {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}

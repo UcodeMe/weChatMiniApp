@@ -1,0 +1,7 @@
+<view class='search-block'>
+  <search-bar bind:tapSearch="doSearch" focus="true" />
+</view>
+<view class='search-hot'>
+  <view class="hot-title">热门搜索：</view>
+  <text-tag tag-items="{{hotTags}}" bind:tapTag="onTapTag" default-if-empty="福利好" />
+</view>

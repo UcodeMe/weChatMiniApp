@@ -1,0 +1,1 @@
+<web-view src="{{url}}?postid={{postid}}&token={{token}}&baseurl={{baseUrl}}" bindmessage="getMessage"></web-view>

@@ -1,0 +1,32 @@
+<view class='loading-tips' wx:if="{{!loadComplate}}">
+  页面载入中...
+</view>
+
+<view class='operation-block' wx:if='{{loadComplate && isLogin}}'>
+  <image style='height:{{windowHeight}}px' mode='scaleToFill' src='http://qiniu.meefine.com/re-bg.jpg' />
+  <view class='operation'>
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="_bindGetUserInfo">
+      <text class='iconfont icon-weixin' /> 微信授权登录
+    </button>
+    <view class='need-update' wx:else>请升级微信版本</view>
+  </view>
+</view>
+
+<block wx:else>
+  <block wx:if="{{loadComplate}}">
+    <include src="search-banner" />
+
+    <block wx:for="{{selectionList}}" wx:key="item" wx:index="index">
+      <view wx:if="{{index != 0}}" class='page-line'></view>
+      <view class='all-list clearfix'>
+        <block wx:if="{{item.selectionType =='COMPANY_PUBLICIZE'}}">
+          <include src="company-publicize.wxml" />
+        </block>
+
+        <block wx:if="{{item.selectionType =='DIRECT_RECOMMEND'}}">
+          <include src="direct-recommend.wxml" />
+        </block>
+      </view>
+    </block>
+  </block>
+</block>

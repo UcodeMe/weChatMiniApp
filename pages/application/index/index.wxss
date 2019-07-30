@@ -1,0 +1,118 @@
+/* pages/application/index/index.wxss */
+.clearfix{
+  overflow: hidden;
+  _height:100%;
+}
+.main-top{
+  width: 100%;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.job-list{
+  width: 100%;
+  padding: 34rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  box-shadow: #000000 0px 0px 10px
+}
+.job-nam {
+  float: left;
+  width: 100%;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bolder;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.job-pay {
+  float: left;
+  width: 28%;
+  color: #47bcb8;
+  font-size: 32rpx;
+  margin-right: 2rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.job-address, .have-num, .job-conditions {
+  float: left;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.job-address, .have-num {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.job-address {
+  width: 50%;
+}
+
+.have-num {
+ width: 50%;
+}
+
+.job-conditions {
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.workflow-title,.cv{
+  color: #666;
+  font-size: 36rpx;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.workflow-list {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+}
+
+.workflow-list-item {
+  width: 94rpx;
+  text-align: center;
+}
+
+.workflow-list-item .list-top {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 19rpx;
+  margin-left: 34rpx;
+  border: 4rpx solid #47bcb8;
+}
+
+.workflow-list-item .list-text {
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 8rpx;
+}
+
+.my-cv{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+}
+
+.my-cv>image{
+  width: 240rpx;
+  height: 300rpx;
+}

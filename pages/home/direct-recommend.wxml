@@ -1,0 +1,53 @@
+<view class='direct-list clearfix'>
+  <view class='direct-title clearfix'>
+    <view class='direct-title-left'>职初直推</view>
+    <view class='direct-title-right'>独家渠道，一键直达</view>
+  </view>
+
+  <navigator url='/pages/company/index?companyId={{item.companyInfo.id}}'>
+    <include src="recommend-company.wxml" />
+  </navigator>
+
+  <include src="tag-list.wxml" />
+
+  <block wx:if='{{item.companyInfo.recruitmentProcess && item.companyInfo.recruitmentProcess.length != 0}}'>
+    <interview-process node-names="{{item.companyInfo.recruitmentProcess}}" />
+  </block>
+
+  <view class='jod-list clearfix'>
+    <block wx:for="{{item.jobInfoList}}" wx:key="item">
+      <view class='clearfix job-center'>
+        <!-- <view class='job-line'></view> -->
+        <navigator url='/pages/job/detail?jobId={{item.id}}'>
+          <view class='job-list-left clearfix'>
+            <view class='job-nam'>{{item.jobName}}</view>
+            <view class='job-pay' wx:if='{{item.minSalary}}'>{{item.minSalary}}K-{{item.maxSalary}}K</view>
+            <view class='job-pay' wx:else>面议</view>
+            <view class='job-address'>工作地点：{{item.regionNames}}</view>
+            <view class='have-num'>直推名额：{{item.quantity}}</view>
+            <view class='job-conditions'>直推条件：
+              <text wx:if="{{item.intentEducationLevel == 'DOCTOR'}}">博士及以上学历</text>
+              <text wx:elif="{{item.intentEducationLevel == 'POSTGRADUATE'}}">研究生及以上学历</text>
+              <text wx:elif="{{item.intentEducationLevel == 'UNDERGRADUATE'}}">本科及以上学历</text>
+              <text wx:elif="{{item.intentEducationLevel == 'JUNIOR'}}">大专及以上学历</text>
+              <text wx:else>学历不限</text>
+            </view>
+          </view>
+        </navigator>
+        <view class='job-list-right'>
+          <navigator url='/pages/application/index/index?jobId={{item.id}}'>
+            <view class='get-button'>报名</view>
+          </navigator>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='more-direct'>
+    <navigator url='/pages/company/index?companyId={{item.companyInfo.id}}'>
+      <view class='more-direct-line'></view>
+      <view class='more-direct-text'>查看全部直推职位</view>
+      <view class='more-direct-line'></view>
+    </navigator>
+  </view>
+</view>

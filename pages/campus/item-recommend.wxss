@@ -1,0 +1,101 @@
+.recommend-info {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 50rpx;
+  overflow: hidden;
+}
+
+.recommend-info .company-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 20rpx;
+}
+
+.recommend-info .right-info {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recommend-info .company-logo {
+  width: 82rpx;
+  height: 82rpx;
+  border: 1rpx solid #ddd;
+}
+
+.recommend-info .top-block {
+  display: flex;
+}
+
+.recommend-info .recommend-reason {
+  display: flex;
+  margin-top: 35rpx;
+  align-items: center;
+}
+
+.recommend-info .nature-industry {
+  display: flex;
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.nature-industry >view {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 295rpx;
+}
+
+.recommend-info .publicize-block {
+  border-top: 1rpx solid #ebebeb;
+  padding-top: 25rpx;
+  margin-top: 25rpx;
+}
+
+.recommend-info .publicize-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgba(102, 102, 102, 1);
+  margin-bottom: 25rpx;
+}
+
+.recommend-info .publicize-date, .recommend-info .publicize-address {
+  font-size: 30rpx;
+  color: rgba(102, 102, 102, 1);
+}
+
+.recommend-info .publicize-address {
+  margin-top: 30rpx;
+}
+
+.recommend-info .publicize-address {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.recommend-info .more-job {
+  display: flex;
+  color: #47bcb8;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30rpx;
+  padding-bottom: 55rpx;
+}
+
+.recommend-info .job-num {
+  font-size: 30rpx;
+}
+
+.recommend-info .more-line {
+  width: 94rpx;
+  height: 2rpx;
+  background-color: #47bcb8;
+}
+
+.recommend-info .split-line {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}

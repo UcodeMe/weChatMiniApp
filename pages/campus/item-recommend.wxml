@@ -1,0 +1,58 @@
+<block wx:if="{{recommendList.length == 0}}">
+  <data-null/>
+</block>
+<block wx:else>
+  <block wx:for="{{recommendList}}" wx:key="item" wx:for-index="idx">
+    <navigator url='/pages/company/index?companyId={{item.companyInfo.id}}'>
+      <view class="recommend-info {{idx > 0?'block-split':''}}">
+
+        <view class='top-block'>
+          <image class='company-logo' src='{{item.companyInfo.companyLogo}}' mode='scaleToFill' />
+          <view class='right-info'>
+            <view class='company-name'>{{item.companyInfo.companyName}}</view>
+            <!-- <view class='position-name' wx:if="{{item.companyInfo.industryPositionName}}">
+              {{item.companyInfo.industryPositionName}}
+            </view> -->
+            <view class='nature-industry'>
+              <view class='nature-name'>企业性质：
+                <block wx:if="{{item.companyInfo.natureName}}">
+                  {{item.companyInfo.natureName}}
+                </block>
+                <block wx:else>
+                  未知
+                </block>
+              </view>
+              <view class='split-line'>|</view>
+              <view class='industry-name'>所属行业：
+                <block wx:if="{{item.companyInfo.industryNames}}">
+                  {{item.companyInfo.industryNames}}
+                </block>
+                <block wx:else>
+                  未知
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+        <view class='recommend-reason'>
+          <view class='reason'>推荐理由：</view>
+          <text-tag tag-items="{{item.companyInfo.tagNames}}" default-if-empty="发展空间大" />
+        </view>
+
+        <view class='publicize-block'>
+          <view class='publicize-title'>近期宣讲会</view>
+          <view class='publicize-date'>时间：{{item.publicizeInfo.holdDate}} {{item.publicizeInfo.startTime}}</view>
+          <view class='publicize-address'>地点：{{item.publicizeInfo.place}}</view>
+        </view>
+
+        <view class='more-job'>
+          <view class='more-line' />
+          <view class='job-num'>共有{{item.companyInfo.jobCount}}个岗位等你来申请</view>
+          <view class='more-line' />
+        </view>
+      </view>
+    </navigator>
+  </block>
+</block>

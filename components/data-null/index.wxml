@@ -1,0 +1,4 @@
+<view class='no-data'>
+  <image mode='scaleToFill' src='http://qiniu.meefine.com/kong.png'></image>
+  <view>什么也没有~</view>
+</view>

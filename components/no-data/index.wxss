@@ -1,0 +1,12 @@
+@import "/assets/wxss/iconfont.wxss";
+
+.no-data {
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.no-data .iconfont {
+  display: block;
+  margin-bottom: 30rpx;
+}

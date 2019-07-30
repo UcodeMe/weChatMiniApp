@@ -1,0 +1,33 @@
+@import "/assets/wxss/iconfont.wxss";
+
+.name-block {
+  height: 110rpx;
+  border-top: 21rpx solid #ebebeb;
+  border-bottom: 21rpx solid #ebebeb;
+  width: inherit;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: inherit;
+  margin-left: 25rpx;
+  margin-right: 5rpx;
+  color: #666;
+  font-size: 30rpx;
+}
+
+.icon-delete {
+  font-size: 48rpx;
+  margin-right: 20rpx;
+}
+
+button {
+  width: 500rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #ff6000;
+  margin-top: 65rpx;
+  color: #fff;
+  font-size: 32rpx;
+}

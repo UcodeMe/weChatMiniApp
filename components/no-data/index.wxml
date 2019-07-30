@@ -1,0 +1,4 @@
+<view class='no-data'>
+  <text class='iconfont icon-none1'></text>
+  <view>空空如也</view>
+</view>

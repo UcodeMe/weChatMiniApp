@@ -1,0 +1,26 @@
+.search-block {
+  padding: 0 26rpx;
+}
+
+.search-history {
+  margin-top: 58rpx;
+  padding-top: 46rpx;
+  padding-left: 26rpx;
+  border-top: 1rpx solid #eaeaea;
+}
+
+.search-history .title {
+  color: #333;
+  font-size: 30rpx;
+  margin-bottom: 33rpx;
+}
+
+.search-hot {
+  padding: 19rpx 36rpx;
+  color:white;
+}
+
+.hot-title{
+  margin-bottom:10rpx;
+  color: #777;
+}

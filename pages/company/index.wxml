@@ -1,0 +1,128 @@
+<import src="../../assets/wxParse/wxParse.wxml" />
+
+<block wx:if="{{companyLoaded}}">
+  <include src="dialog-qrcode.wxml" />
+  <include src="logo-intro.wxml" />
+
+  <view class='tagNames'>
+    <view class='tags1'>
+      <view class='tagTitle'>推荐理由：</view>
+      <block wx:if="{{companyInfo.tagNames}}">
+        <view wx:for="{{companyInfo.tagNames}}" wx:key="item">{{item}}</view>
+      </block>
+      <block wx:else>
+        <view>
+          <view>福利好</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+
+
+  <view class='company-profile'>
+    <view class='profile-top'>
+      <text class='profile-title'>企业简介</text>
+      <text wx:if="{{companyInfo.follow}}" class='unFollow' bindtap='_unFollow'>取消关注</text>
+      <text wx:else class='follow' bindtap='_follow'>关注</text>
+    </view>
+    <view class='profile-text' id='detail' style='height:{{detailH}}rpx'>
+      <template is="wxParse" data="{{wxParseData:companyDesc.nodes}}" />
+    </view>
+    <view class='show-more'>
+      <view class='more-line'></view>
+      <view class='more-text' wx:if='{{textdown}}' bindtap='_showMore'>查看更多</view>
+      <view class='more-text' wx:else bindtap='_showMore' data-up='1'>收起</view>
+      <view class='more-line'></view>
+    </view>
+  </view>
+
+  <view class='page-line'></view>
+
+
+</block>
+<view class='timetable'>
+  <view class='timetable-title'>招聘日程</view>
+  <view class='timetable-list'>
+    <view class='list-M'>
+      <view>{{month}}</view>
+      <text>月</text>
+    </view>
+    <view class='timetable-right'>
+      <view class='list-week'>
+        <block wx:for="{{dateInfo.week}}" wx:key="item">
+          <view class='list-w'>{{item}}</view>
+        </block>
+      </view>
+      <view class='list-date'>
+        <block wx:for="{{dateInfo.date}}" wx:key="item" wx:for-index="idx">
+          <view class='list-d {{clickNum==idx ? "active":""}}' bindtap='_clickDtae' data-fulldate='{{idx}}'>{{item}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+
+  <view wx:if="{{publicizeInfo.length == 0}}" class='no-publicize'>暂无宣讲会信息</view>
+  <block wx:else>
+    <view wx:for='{{publicizeInfo}}' wx:key='key' class='meet-list'>
+      <view class='meet-time'>时间：{{item.holdDate}} {{item.startTime}}-{{item.endTime}}({{item.weekDay}})</view>
+      <view class='meet-place'>
+        <view class='place-title'>地点：</view>
+        <view class='place-L'>{{item.regionName}}</view>
+        <view class='place-line'></view>
+        <view class='place-R'>{{item.place}}</view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if='{{companyInfo.recruitmentProcess.length != 0}}'>
+    <view class='workflow'>
+      <view class='workflow-title'>招聘流程</view>
+      <interview-process node-names="{{companyInfo.recruitmentProcess}}" />
+    </view>
+  </block>
+  <block wx:if='{{companyInfo.onlineApplyEndTime}}'>
+    <view class='inte-timel'>
+      <view class='inte-title'>网申时间</view>
+      <view class='inte-text'>
+        <text>{{companyInfo.onlineApplyStartTime}}</text>
+        <text class='long-line'></text>
+        <text>{{companyInfo.onlineApplyEndTime}}</text>
+      </view>
+    </view>
+  </block>
+
+</view>
+
+<view class='jod-list clearfix' wx:if="{{jobLoaded}}">
+  <block wx:for="{{jobInfo}}" wx:key="item">
+    <view class='clearfix'>
+      <view class='job-line'></view>
+
+      <view class='job-block'>
+        <navigator url='/pages/job/detail?jobId={{item.id}}'>
+          <view class='job-list-left clearfix'>
+            <view class='job-nam'>{{item.jobName}}</view>
+            <view class='job-pay' wx:if="{{item.minSalary}}">{{item.minSalary}}K-{{item.maxSalary}}K</view>
+            <view class='job-pay' wx:else>面议</view>
+            <view class='job-address'>工作地点：{{item.regionNames}}</view>
+            <view class='have-num'>直推名额：{{item.quantity}}</view>
+            <view class='job-conditions'>直推条件：
+              <text wx:if="{{item.intentEducationLevel == 'DOCTOR'}}">博士及以上学历</text>
+              <text wx:elif="{{item.intentEducationLevel == 'POSTGRADUATE'}}">研究生及以上学历</text>
+              <text wx:elif="{{item.intentEducationLevel == 'UNDERGRADUATE'}}">本科及以上学历</text>
+              <text wx:elif="{{item.intentEducationLevel == 'JUNIOR'}}">大专及以上学历</text>
+              <text wx:else>学历不限</text>
+            </view>
+          </view>
+        </navigator>
+        <view class='job-list-right'>
+          <navigator url='/pages/application/index/index?jobId={{item.id}}'>
+            <view class='get-button'>报名</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

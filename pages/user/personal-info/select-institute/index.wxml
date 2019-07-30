@@ -1,0 +1,10 @@
+<view class='list-content'>
+  <radio-group bindchange="_onChange">
+    <block wx:for="{{instituteList}}" wx:key="item" wx:for-index="idx">
+      <view class="checkbox-item {{idx ==0 ? '':'split-line'}}">
+        <text class='item-name'>{{item.instituteName}}</text>
+        <radio value='{{item.instituteId}}'  checked="{{item.checked}}"/>
+      </view>
+    </block>
+  </radio-group>
+</view>

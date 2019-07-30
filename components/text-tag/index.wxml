@@ -1,0 +1,8 @@
+<view class='text-tag'>
+  <block wx:if="{{tagItems.length == 0}}">
+    <text bindtap='onTap' data-text="{{defaultIfEmpty}}">{{defaultIfEmpty}}</text>
+  </block>
+  <block wx:else>
+    <text wx:for="{{tagItems}}" wx:key="item" bindtap='onTap' data-text="{{item}}">{{item}}</text>
+  </block>
+</view>

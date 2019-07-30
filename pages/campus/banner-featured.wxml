@@ -1,0 +1,22 @@
+<view class="image-banner">
+  <swiper-banner image-list="{{swiperBannerImages}}" />
+</view>
+<view class='featured'>
+  <navigator url="/pages/publicize/index">
+    <view class='featured-item'>
+      <view class='featured-icon'>
+        <image class='featured-image' src='http://qiniu.meefine.com/campus1.png' mode="scaleToFill"></image>
+      </view>
+      <view class='featured-title'>校园宣讲会</view>
+      <view class='featured-bottom'>最近7日精选</view>
+    </view>
+  </navigator>
+
+  <view class='featured-item' bindtap='_getFairs'>
+    <view class='featured-icon'>
+      <image class='featured-image' src='http://qiniu.meefine.com/campus2.png' mode="scaleToFill"></image>
+    </view>
+    <view class='featured-title'>优选招聘会</view>
+    <view class='featured-bottom'>最近7日精选</view>
+  </view>
+</view>

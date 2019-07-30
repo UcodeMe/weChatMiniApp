@@ -1,0 +1,476 @@
+@import "/assets/wxss/common.wxss";
+@import "/assets/wxss/iconfont.wxss";
+
+page {
+  /* background-color: #eee; */
+}
+
+.loading-tips{
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  line-height:400rpx;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.operation-block image {
+  width: 100%;
+}
+
+.page-line {
+  height: 20rpx;
+  width: 100%;
+  background: #eee;
+}
+
+.operation-block .icon-weixin {
+  color: #fff;
+  position: relative;
+  top: 5rpx;
+  margin-right: 13rpx;
+  width: 56rpx;
+  height: 46rpx;
+  font-size: 40rpx;
+}
+
+.operation-block .operation {
+  position: absolute;
+  top: 900rpx;
+  width: 100%;
+}
+
+.operation button {
+  background-color: #47bcb8;
+  width: 501rpx;
+  color: #fff;
+  overflow: hidden;
+  line-height: 80rpx;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.search-bar {
+  max-width: 100%;
+  padding: 10rpx 40rpx 20rpx 38rpx;
+  /* background: #fff; */
+  height: 60rpx;
+  background-color: #fff;
+}
+
+.image-banner {
+  margin-top: 90rpx;
+}
+
+.position {
+  font-size: 32rpx;
+  float: left;
+  margin-right: 30rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+}
+
+/* 公司详情 */
+
+.all-list {
+}
+
+.session-list {
+  background: #fff;
+}
+
+.direct-list {
+  background: #fff;
+}
+
+.company {
+  padding: 50rpx 44rpx 44rpx 42rpx;
+  display: flex;
+  align-items: flex-start;
+}
+
+.companyLogo {
+  width: 80rpx;
+  height: 80rpx;
+  border: 1rpx #eee solid;
+}
+
+.company .doc-icon {
+  width: 200rpx;
+  /* height: 200rpx; */
+  border: 1rpx solid#E5E5E5;
+  padding: 10rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+}
+
+.company .iconfont {
+  font-size: 100rpx;
+}
+
+.companyName {
+  font-size: 32rpx;
+  font-weight: bold;
+  max-width: 370rpx;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 10rpx;
+}
+
+.industryPositionName {
+  font-size: 24rpx;
+  width: 164rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  border-radius: 15rpx;
+  float: left;
+  background: #ff9244;
+  color: #fff;
+}
+
+.company .bottom {
+  display: inline-flex;
+  margin-top: 19rpx;
+}
+
+.bottom .natureName, .bottom .industryNames {
+  color: #999;
+  font-size: 24rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 300rpx;
+}
+
+.bottom-address {
+  margin-top: 18rpx;
+  color: #999;
+  font-size: 24rpx;
+  max-width: 550rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tagNames {
+  max-width: 90%;
+  overflow: hidden;
+  padding-left: 21rpx 30rpx;
+  padding-right: 21rpx;
+  margin-left: 45rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-bottom: 30rpx;
+}
+
+.split-line {
+  border-bottom: 1rpx solid #ebebeb;
+}
+
+.tagNames2 {
+  width: 88%;
+  height: 47rpx;
+  overflow: hidden;
+  /* border-bottom: 1rpx solid #ebebeb; */
+  padding-left: 21rpx;
+  padding-right: 21rpx;
+  margin-left: 21rpx;
+  margin-top: 50rpx;
+}
+
+.tagNames .tagTitle, .tagNames2 .tagTitle {
+  float: left;
+  font-size: 30rpx;
+}
+
+.tagView {
+  float: left;
+  max-width: 75%;
+  overflow: hidden;
+  height: 38rpx;
+}
+
+.tagNames .tags, .tagNames2 .tags {
+  font-size: 22rpx;
+  color: #f57921;
+  /* margin-top: 20rpx; */
+  float: left;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.recent {
+  padding-left: 42rpx;
+  padding-top: 15rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 30rpx;
+  padding-right: 42rpx;
+}
+
+.recent-title {
+  font-weight: bolder;
+  font-size: 30rpx;
+}
+
+.tags>view {
+  height: 33rpx;
+  line-height: 33rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  border-radius: 33rpx;
+  background-color: #fff9f1;
+  margin-right: 20rpx;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.recent-item {
+  font-weight: normal;
+  margin-top: 18rpx;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 1.2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 680rpx;
+}
+
+.list-line {
+  width: 39rpx;
+  height: 2rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #47bcb8;
+  margin-top: -30rpx;
+}
+
+.more-job {
+  width: 100%;
+  /* height: 188rpx; *//* background: url("http://qiniu.meefine.com/more_job_ba.png") no-repeat center; */
+  background-size: 100% 100%;
+  text-align: center;
+  padding-left: 66rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.more-line {
+  width: 94rpx;
+  height: 2rpx;
+  box-sizing: border-box;
+  /* border: 2rpx solid #47bcb8; */
+  background: #47bcb8;
+  float: left;
+  margin-top: 45rpx;
+  margin-left: 26rpx;
+}
+
+.job-num {
+  font-size: 30rpx;
+  color: #47bcb8;
+  float: left;
+  margin: 28rpx 30rpx 50rpx 30rpx;
+}
+
+/* 直推 */
+
+.direct-list {
+  /* margin-top: 20rpx; */
+}
+
+.direct-title {
+  width: 100%;
+  /* height: 36rpx; */
+  line-height: 36rpx;
+  padding-left: 40rpx;
+  padding-top: 52rpx;
+  box-sizing: border-box;
+  /* padding-bottom: 44rpx; */
+}
+
+.direct-title-left {
+  color: #666;
+  font-size: 30rpx;
+  margin-right: 22rpx;
+  float: left;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-weight: bolder;
+}
+
+.direct-title-right {
+  color: #999;
+  font-size: 24rpx;
+  float: left;
+  height: 28rpx;
+  line-height: 28rpx;
+  border-left: 1rpx solid #999;
+  padding-left: 22rpx;
+  margin-top: 5rpx;
+}
+
+.companyLogo2 {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1rpx #ccc solid;
+}
+
+.jod-list {
+  /* height: 216rpx; */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 40rpx 0rpx 40rpx;
+}
+
+.job-center {
+  border-top: 1rpx solid #ebebeb;
+  padding-top: 22px;
+}
+
+.job-line {
+  width: 100%;
+  height: 2rpx;
+  box-sizing: border-box;
+  background: #ebebeb;
+  margin-bottom: 46rpx;
+  /* margin-top: 40rpx; */
+  margin-left: -18rpx;
+}
+
+.job-list-left, .ob-list-right {
+}
+
+.job-list-left {
+  width: 514rpx;
+  float: left;
+  margin-bottom: 28rpx;
+}
+
+.job-list-right {
+  width: 155rpx;
+  float: left;
+  padding-top: 2%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.job-nam {
+  float: left;
+  width: 70%;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bolder;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.job-pay {
+  float: left;
+  width: 28%;
+  color: #47bcb8;
+  font-size: 32rpx;
+  margin-right: 2rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bolder;
+  /* text-align: center */
+}
+
+.job-address, .have-num, .job-conditions {
+  float: left;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.job-address, .have-num {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.job-address {
+  width: 70%;
+}
+
+.have-num {
+  max-width: 29%;
+}
+
+.job-conditions {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.job-right {
+}
+
+.get-button {
+  width: 100%;
+  /* height: 64rpx; */
+  border-radius: 32rpx;
+  line-height: 64rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  background: #47bcb8;
+}
+
+.more-direct {
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  padding: 10rpx 68rpx 38rpx 68rpx;
+  box-sizing: border-box;
+}
+
+.more-direct-line {
+  width: 142rpx;
+  height: 2rpx;
+  background: #47bcb8;
+  float: left;
+  margin-top: 16rpx;
+}
+
+.more-direct-text {
+  float: left;
+  color: #47bcb8;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.company-right {
+  margin-left: 15rpx;
+}
+
+.company-right .title {
+  display: flex;
+}

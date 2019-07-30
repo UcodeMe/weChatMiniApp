@@ -1,0 +1,27 @@
+<view class='company clearfix'>
+  <image class='companyLogo' src='{{item.companyInfo.companyLogo}}' mode='scaleToFill'></image>
+  <view class='company-right'>
+    <view class='title'>
+      <view class='companyName'>{{item.companyInfo.companyName}}</view>
+      <view class='industryPositionName' wx:if="{{item.companyInfo.industryPositionName}}">{{item.companyInfo.industryPositionName}}</view>
+    </view>
+    <view class='bottom clearfix'>
+      <view class='natureName' wx:if="{{item.companyInfo.natureName}}">企业性质：
+        <block wx:if="{{item.companyInfo.natureName}}">
+          {{item.companyInfo.natureName}}
+        </block>
+        <block wx:else>
+          未知
+        </block>
+      </view>
+      <view class='industryNames'> | 所属行业：
+        <block wx:if="{{item.companyInfo.industryNames}}">
+          {{item.companyInfo.industryNames}}
+        </block>
+        <block wx:else>
+          未知
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

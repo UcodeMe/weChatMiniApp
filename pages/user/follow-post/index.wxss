@@ -1,0 +1,106 @@
+@import "/assets/wxss/common.wxss";
+@import "/assets/wxss/iconfont.wxss";
+
+.r-icon {
+  float: right;
+  color: #aaa;
+  font-size: 24rpx;
+}
+
+.focus-tip {
+  width: 100%;
+  height: 120rpx;
+  color: #ff9244;
+  font-size: 28rpx;
+  background: #ffe8d9;
+  padding: 16rpx 42rpx 18rpx 40rpx;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.focus-list {
+  height: 140rpx;
+  border-bottom: 1rpx solid #ebebeb;
+  line-height: 140rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.focus-list .post-name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.focus-button {
+  width: 156rpx;
+  height: 64rpx;
+  text-align: center;
+  line-height: 64rpx;
+  font-size: 26rpx;
+  border-radius: 32rpx;
+  color: #47bcb8;
+  border: 1rpx solid #47bcb8;
+}
+
+.get_follow {
+  color: #fff;
+  background: #47bcb8;
+}
+
+.myPost {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 23rpx 40rpx 20rpx 40rpx;
+}
+
+.myPost .title {
+  display: flex;
+  width: 100%;
+}
+
+.title .title-left {
+  font-size: 32rpx;
+  color: #333;
+  padding-right: 5rpx;
+  box-sizing: border-box;
+  margin-right: 5rpx;
+}
+
+.title .title-right {
+  font-size: 28rpx;
+  color: #aaa;
+}
+
+.post-list {
+  width: 100%;
+  /* padding: 10rpx; */
+  box-sizing: border-box;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.post-list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 60rpx;
+  color: #ff9244;
+  font-size: 24rpx;
+  border: 1rpx solid #ff9244;
+  border-radius: 35rpx;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+  margin-bottom: 20rpx;
+}
+
+.post-set {
+  text-align: center;
+  color: #60c4c1;
+  font-size: 30rpx;
+}

@@ -1,0 +1,24 @@
+<block wx:if="{{pageShow}}">
+<view class="container clearfix" wx:for="{{focusList}}" wx:key="item">
+<navigator url='/pages/company/index?companyId={{item.companyId}}'>
+    <view class="company clearfix" data-index="{{index}}" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend' style="transform:translateX({{item.x/2}}px);">
+      <image class='companyLogo' src='{{item.companyLogo}}' mode='scaleToFill'></image>
+      <view class='middle'>
+        <view class='companyName'>{{item.companyName}}</view>
+      </view>
+      <view class='bottom'>
+        <view class='natureName' wx:if="{{item.natureName}}">企业性质：{{item.natureName}}</view>
+        <view class='natureName' wx:else>企业性质：—</view>
+        <view class='industryNames' wx:if="{{item.industryNames}}">| 所属行业：{{item.industryNames}}</view>
+        <view class='industryNames' wx:else>| 所属行业：—</view>
+      </view>
+      <view class='bottom-address'>公司地址：{{item.address}}</view>
+    </view>
+</navigator>
+    <view class="delete" catchtap="_del" data-index="{{index}}" data-id="{{item.companyId}}" data-name="{{item.companyName}}">删除</view>
+  </view>
+
+</block>
+<block wx:else>
+  <data-null />
+</block>

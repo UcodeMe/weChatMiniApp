@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "直推报名",
+  "usingComponents": {
+    "interview-process-2": "/components/interview-process-2/index"
+  }
+}

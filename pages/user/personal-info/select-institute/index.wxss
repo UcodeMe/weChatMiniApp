@@ -1,0 +1,5 @@
+@import "/assets/wxss/common.wxss";
+
+.list-content {
+  margin: 18rpx 18rpx 0rpx 18rpx;
+}

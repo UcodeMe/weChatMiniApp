@@ -1,0 +1,288 @@
+@import "/assets/wxss/common.wxss";
+@import "/assets/wxss/iconfont.wxss";
+
+.user-center {
+  background: #fafafa;
+  overflow: hidden;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.user-center .first-level {
+  height: 315rpx;
+  width: 100%;
+}
+
+.user-center  .avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+  border: 5rpx solid #fff;
+  background-color: black;
+  position: absolute;
+  top: 305rpx;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.user-center .edit-info {
+  position: absolute;
+  right: 35rpx;
+  top: 340rpx;
+  font-size: 26rpx;
+}
+
+.edit-info-hover, .edit-info-hover .iconfont {
+  color: #ff6000;
+}
+
+.edit-info .icon-setting {
+  margin-right: 12rpx;
+  font-size: 26rpx;
+}
+
+.name-age {
+  padding-top: 86rpx;
+}
+
+.name-age .user-name {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.name-age .user-age {
+  margin-left: 16rpx;
+}
+
+.school-major {
+  padding-top: 31rpx;
+}
+
+.school-major .spliter-line {
+  margin: 0 30rpx;
+  font-weight: 300;
+  font-size: 18rpx;
+}
+
+.some-collection {
+  height: 140rpx;
+  margin: 35rpx 30rpx 0 30rpx;
+  border-top: 1px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25rpx;
+}
+
+.some-collection .txt {
+  margin-top: 22rpx;
+}
+
+.some-collection>view {
+  display: flex;
+  flex-direction: column;
+}
+
+.some-collection .num {
+  font-size: 42rpx;
+  color: #ff6000;
+  font-weight: bold;
+}
+
+.list-content {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.list-content .iconfont {
+  font-size: 34rpx;
+  margin-right: 18rpx;
+}
+
+.list-content .icon-arrowright {
+  position: absolute;
+  right: 14rpx;
+}
+
+.list-content  .list-item {
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.list-content .level-1 {
+  height: 116rpx;
+  font-weight: bold;
+}
+
+.list-content .level-2 {
+  height: 108rpx;
+}
+
+.item-tag {
+  display: flex;
+  flex-direction: row;
+  margin-left: 37rpx;
+  font-size: 26rpx;
+  color: #333;
+  position: absolute;
+  right: 65rpx;
+}
+
+.item-tag .spliter::before {
+  content: '/';
+}
+
+.item-tag > text {
+  height: 58rpx;
+  line-height: 54rpx;
+  border-radius: 58rpx;
+  display: block;
+  max-width: 170rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.in-develop {
+  font-size: 24rpx;
+  color: 666666;
+}
+
+.feature-title {
+  margin-top: 52rpx;
+  padding-left: 30rpx;
+}
+
+.feature-title .icon-select_fill {
+  font-size: 38rpx;
+  margin-right: 23rpx;
+}
+
+.feature-title text:nth-child(2) {
+  color: #333;
+  font-weight: bolder;
+  margin-right: 16rpx;
+  font-size: 32rpx;
+}
+
+.feature-title text:nth-child(3) {
+  color: #666;
+  font-size: 24rpx;
+}
+
+.feature {
+  overflow: hidden;
+  margin: 27rpx 30rpx 0rpx 30rpx;
+}
+
+.feature >view:nth-child(1) {
+  width: 80rpx;
+  height: inherit;
+  color: #fff;
+  font-weight: 600;
+  font-size: 32rpx;
+  float: left;
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding-left: 37rpx;
+  line-height: 36rpx;
+}
+
+.feature >view:nth-child(2) {
+  height: inherit;
+  color: #333;
+  font-size: 24rpx;
+  width: auto;
+  padding-left: 156rpx;
+}
+
+.feature progress {
+  width: 250rpx;
+  margin-left: 34rpx;
+}
+
+.feature .feature-item {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 32rpx;
+}
+
+.feature-item > view {
+  width: 150rpx;
+  text-align: right;
+}
+
+.emotion {
+  height: 308rpx;
+}
+
+.emotion >view:nth-child(1) {
+  background-color: #6686f6;
+}
+
+.emotion >view:nth-child(2) {
+  background-color: #f1f5ff;
+  padding-top: 68rpx;
+}
+
+.knowledge {
+  height: 178rpx;
+}
+
+.knowledge >view:nth-child(1) {
+  background-color: #77cdc5;
+}
+
+.knowledge >view:nth-child(2) {
+  background-color: #eefffd;
+  padding-top: 58rpx;
+}
+
+.ability {
+  margin-bottom: 28rpx;
+  height: 170rpx;
+}
+
+.ability >view:nth-child(1) {
+  background-color: #f2c272;
+}
+
+.ability >view:nth-child(2) {
+  background-color: #fff8ed;
+  padding-top: 75rpx;
+}
+
+.not-regist {
+  position: relative;
+}
+
+.not-regist image {
+  width: 100%;
+  height: 1334rpx;
+}
+
+.not-regist .operation {
+  position: absolute;
+  top: 800rpx;
+  width: 100%;
+}
+
+.operation button {
+  background-color: #47bcb8;
+  width: 501rpx;
+  color: #fff;
+  overflow: hidden;
+  line-height: 80rpx;
+}
+
+.operation .icon-weixin {
+  color: #fff;
+  position: relative;
+  top: 16rpx;
+  margin-right: 13rpx;
+  width: 56rpx;
+  height: 46rpx;
+}

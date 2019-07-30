@@ -1,0 +1,38 @@
+<block wx:for="{{publicizeList}}" wx:key="item" wx:for-index="idx">
+  <navigator url='/pages/company/index?companyId={{item.companyId}}'>
+    <view class="publicize-info {{idx > 0?'block-split':''}}">
+      <view class='hold-date'> {{item.holdDate}} {{item.weekDay}}</view>
+      <view class='info-block'>
+        <view class='hold-time'>
+          <view class='start-time'>{{item.startTime}}</view>
+          <view class='end-time'>-{{item.endTime}}</view>
+        </view>
+        <view class='right'>
+          <view class='company-info'>
+            <image class='company-logo' wx:if="{{item.companyLogo}}" src='{{item.companyLogo}}' mode='aspectFit' />
+            <view class='company-name'>{{item.companyName}}</view>
+            <view class='type' wx:if='{{item.industryPositionName}}'>{{item.industryPositionName}}</view>
+          </view>
+          <view class='tags'>
+            <text-tag tag-items="{{item.tagNames}}" default-if-empty="福利好" />
+          </view>
+        </view>
+      </view>
+      <view class='company-extra-info'>
+        <view class='nature-name' wx:if="{{item.natureName}}">企业性质：{{item.natureName}}</view>
+        <view class='nature-name' wx:else>企业性质：未知</view>
+        <view class='split-line'>|</view>
+        <view class='industry-names'>
+          所属行业：
+          <block wx:if="{{item.industryNames}}">
+            {{item.industryNames}}
+          </block>
+          <block wx:else>
+            未知
+          </block>
+        </view>
+      </view>
+      <view class='publicize-address'>地点：{{item.place}}</view>
+    </view>
+  </navigator>
+</block>

@@ -1,0 +1,63 @@
+<view class="wrapper">
+  <block wx:if="{{show}}">
+    <block wx:for="{{applicationList}}" wx:key="item" wx:index="{{index}}">
+      <view class='company clearfix'>
+        <image class='companyLogo' src='{{item.companyInfo.companyLogo}}' mode='scaleToFill'></image>
+        <view class='middle'>
+          <view class='companyName'>{{item.companyInfo.companyName}}</view>
+        </view>
+        <view class='bottom'>
+          <view class='natureName' wx:if="{{item.companyInfo.natureName}}">企业性质：{{item.companyInfo.natureName}}</view>
+          <view class='natureName' wx:else>企业性质：——</view>
+          <!-- <view class='industryNames'>所属行业：IT互联网</view> -->
+          <view class='industryNames' wx:if="{{item.companyInfo.industryNames}}">所属行业：{{item.companyInfo.industryNames}}</view>
+          <view class='industryNames' wx:else>所属行业：——</view>
+        </view>
+        <view class='bottom-address'>公司地址：{{item.companyInfo.address}}</view>
+      </view>
+
+      <view class='jod-list clearfix'>
+        <navigator url='/pages/application/process/index?jobId={{item.jobInfo.jobId}}'>
+          <view class='job-list-left'>
+            <view class='job-nam'>{{item.jobInfo.jobName}}</view>
+            <!-- <view class='job-pay'>4.5K-70K</view> -->
+            <view class='job-address'>工作地点：{{item.jobInfo.regionNames}}</view>
+            <view class='have-num'>招聘数量：{{item.jobInfo.quantity}}</view>
+            <!-- <view class='job-conditions'>学历要求：{{item.jobInfo.intentEducationLevel}}</view> -->
+            <view class='job-conditions' wx:if="{{item.jobInfo.intentEducationLevel == 'DOCTOR'}}">学历要求：博士</view>
+            <view class='job-conditions' wx:if="{{item.jobInfo.intentEducationLevel == 'POSTGRADUATE'}}">学历要求：研究生</view>
+            <view class='job-conditions' wx:if="{{item.jobInfo.intentEducationLevel == 'UNDERGRADUATE'}}">学历要求：本科</view>
+            <view class='job-conditions' wx:if="{{item.jobInfo.intentEducationLevel == 'JUNIOR'}}">学历要求：大专</view>
+            <view class='job-conditions' wx:if="{{item.jobInfo.intentEducationLevel == 'NOlIMIT'}}">学历要求：不限</view>
+            <view class='job-conditions2' wx:if='{{jobInfo.specialtyNames}}'>专业要求：{{jobInfo.specialtyNames}}</view>
+            <view class='job-conditions2' wx:else>专业要求：不限</view>
+            <!-- <view class='job-conditions2'>专业要求：不限</view> -->
+          </view>
+          <view class='job-list-right clearfix'>
+            <view class='iconfont icon-arrowright r-icon'></view>
+          </view>
+
+
+
+
+
+          <view class='process-block' wx:if='{{item.processList && item.processList.length != 0}}'>
+            <interview-process-2 node-names="{{item.processList}}" />
+          </view>
+
+        </navigator>
+      </view>
+
+
+      <view class='job-line' wx:if="{{index != applicationList.length -1}}"> </view>
+
+
+    </block>
+  </block>
+  <block wx:else>
+    <view class='no-search-data'>
+      <data-null />
+    </view>
+  </block>
+
+</view>
